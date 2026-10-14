@@ -22,6 +22,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
             display: flex;
@@ -30,6 +31,7 @@
             padding: 30px 6%;
             border-bottom: 1px solid var(--border);
             background: var(--white);
+            box-sizing: border-box;
         }
         .brand {
             font-size: 24px;
@@ -47,6 +49,7 @@
             margin: 80px auto 40px auto;
             text-align: center;
             padding: 0 20px;
+            box-sizing: border-box;
         }
         .coming-soon-tag {
             background-color: var(--tag-bg);
@@ -84,9 +87,11 @@
             justify-content: center;
             gap: 30px;
             margin-bottom: 50px;
+            flex-wrap: wrap;
         }
         .time-block {
             text-align: center;
+            min-width: 70px;
         }
         .time-num {
             font-size: 36px;
@@ -109,6 +114,7 @@
             border-radius: 16px;
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(28,43,26,0.02);
+            box-sizing: border-box;
         }
         .waitlist-section h3 {
             margin-top: 0;
@@ -158,6 +164,7 @@
             max-width: 900px;
             margin: 0 auto 80px auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
         .metric-card {
             background: var(--white);
@@ -165,6 +172,7 @@
             border-radius: 12px;
             border: 1px solid var(--border);
             text-align: center;
+            box-sizing: border-box;
         }
         .metric-val {
             font-size: 28px;
@@ -183,6 +191,7 @@
             padding: 80px 6%;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
+            box-sizing: border-box;
         }
         .features-header {
             text-align: center;
@@ -193,22 +202,37 @@
             margin: 0 0 10px 0;
         }
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
             margin: 0 auto;
         }
+        .feature-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-sizing: border-box;
+            width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
         .feature-item h4 {
-            font-size: 18px;
+            font-size: 20px;
             margin: 0 0 12px 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            color: var(--text-main);
         }
         .feature-item h4 span {
             color: var(--accent-clay);
-            font-weight: 700;
+            font-weight: 800;
+            background: #f4f2eb;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 16px;
         }
         .feature-item p {
             color: var(--text-muted);
@@ -220,6 +244,7 @@
             max-width: 650px;
             margin: 80px auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
         .partner-section h2 {
             text-align: center;
@@ -239,6 +264,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            box-sizing: border-box;
         }
         footer {
             text-align: center;
@@ -249,10 +275,12 @@
             background: var(--white);
         }
         @media(max-width: 768px) {
-            h1 { font-size: 40px; }
-            .metrics-grid, .features-grid { grid-template-columns: 1fr; gap: 20px; }
+            h1 { font-size: 36px; }
+            .metrics-grid { grid-template-columns: 1fr; gap: 15px; }
             .email-form { flex-direction: column; }
-            header { flex-direction: column; gap: 10px; }
+            header { flex-direction: column; gap: 10px; text-align: center; }
+            .feature-item { padding: 20px; }
+            .feature-item h4 { font-size: 18px; }
         }
     </style>
 </head>
@@ -270,10 +298,10 @@
             <p class="subtitle">A technology-driven organic farming network empowering rural communities — launching soon.</p>
             
             <div class="timer-container">
-                <div class="time-block"><span class="time-num" id="days">90</span><span class="time-label">Days</span></div>
-                <div class="time-block"><span class="time-num" id="hours">23</span><span class="time-label">Hrs</span></div>
-                <div class="time-block"><span class="time-num" id="minutes">44</span><span class="time-label">Mins</span></div>
-                <div class="time-block"><span class="time-num" id="seconds">43</span><span class="time-label">Secs</span></div>
+                <div class="time-block"><span class="time-num" id="days">00</span><span class="time-label">Days</span></div>
+                <div class="time-block"><span class="time-num" id="hours">00</span><span class="time-label">Hrs</span></div>
+                <div class="time-block"><span class="time-num" id="minutes">00</span><span class="time-label">Mins</span></div>
+                <div class="time-block"><span class="time-num" id="seconds">00</span><span class="time-label">Secs</span></div>
             </div>
         </section>
 
@@ -284,63 +312,3 @@
                 <input type="email" name="email" placeholder="your@email.com" required>
                 <button type="submit">Join the Waitlist</button>
             </form>
-        </section>
-
-        <section class="metrics-grid">
-            <div class="metric-card">
-                <span class="metric-val">500+</span>
-                <span class="metric-label">Women SHGs Empowered</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-val">Hub & Spoke</span>
-                <span class="metric-label">Tech-Driven Network</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-val">100%</span>
-                <span class="metric-label">Certified Organic Focus</span>
-            </div>
-        </section>
-
-        <section class="features-section">
-            <div class="features-header">
-                <h2>How It Works</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h4><span>01</span> Central Processing Hub</h4>
-Use code with caution.
-Our technology hub aggregates, processes, and certifies organic produce from across the network — ensuring quality and traceability at scale.
-
-
-02 Spoke Farms — Women SHGs
-Rural women self-help groups operate spoke farms using our agri-tech tools, training, and inputs — growing certified organic crops with full support.
-
-
-03 Market & Distribution
-Certified organic produce reaches premium urban markets, institutional buyers, and export channels — delivering fair returns to every farmer.
-
-
-Partner With Us
-Be.Live Organics is building India's most scalable organic farming network — and we're looking for impact investors and strategic partners who share our vision.
-Send Enquiry
-
-
-Be.Live Organics — Growing Tomorrow, Today.
-© 2026 Be.Live Organics. All rights reserved.
-// Target Launch Date: 90 Days from now
-const launchDate = new Date();
-launchDate.setDate(launchDate.getDate() + 90);
-function updateCountdown() {
-const now = new Date().getTime();
-const distance = launchDate - now;
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-document.getElementById("days").innerText = days;
-document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-}
-setInterval(updateCountdown, 1000);
-updateCountdown();
