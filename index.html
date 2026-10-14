@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be.Live Organics — Farming the Future</title>
+    <style>
+        :root {
+            --bg-color: #fcfbfa;
+            --text-main: #1c2b1a;
+            --text-muted: #556b54;
+            --accent-clay: #a47c5c;
+            --tag-bg: #eadecf;
+            --tag-text: #634f3b;
+            --white: #ffffff;
+            --border: #e1ded7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 6%;
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
+        }
+        .brand {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .brand span { color: #5a7d57; }
+        .domain-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+        .hero {
+            max-width: 850px;
+            margin: 80px auto 40px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .coming-soon-tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.15;
+            margin: 0 0 24px 0;
+            letter-spacing: -1px;
+        }
+        h1 span {
+            color: var(--accent-clay);
+            font-style: italic;
+            font-weight: 400;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .time-block {
+            text-align: center;
+        }
+        .time-num {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-clay);
+            display: block;
+        }
+        .time-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .waitlist-section {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto 80px auto;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(28,43,26,0.02);
+        }
+        .waitlist-section h3 {
+            margin-top: 0;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .waitlist-section p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+        .email-form {
+            display: flex;
+            gap: 10px;
+        }
+        input[type="email"], input[type="text"], textarea {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            padding: 14px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
+            border-color: var(--text-muted);
+        }
+        button {
+            background: var(--text-main);
+            color: var(--white);
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        button:hover {
+            background: #2c4229;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+        .metric-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .metric-val {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .features-section {
+            background: #f4f2eb;
+            padding: 80px 6%;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .features-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .features-header h2 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .feature-item h4 {
+            font-size: 18px;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feature-item h4 span {
+            color: var(--accent-clay);
+            font-weight: 700;
+        }
+        .feature-item p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .partner-section {
+            max-width: 650px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .partner-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .partner-section p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        .partner-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+            background: var(--white);
+        }
+        @media(max-width: 768px) {
+            h1 { font-size: 40px; }
+            .metrics-grid, .features-grid { grid-template-columns: 1fr; gap: 20px; }
+            .email-form { flex-direction: column; }
+            header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">Be<span>.</span>Live Organics</div>
+        <div class="domain-label">beliveorganics.com</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="coming-soon-tag">Coming Soon</div>
+            <h1>Farming the <span>Future</span>.<br>Rooted in Odisha.</h1>
+            <p class="subtitle">A technology-driven organic farming network empowering rural communities — launching soon.</p>
+            
+            <div class="timer-container">
+                <div class="time-block"><span class="time-num" id="days">90</span><span class="time-label">Days</span></div>
+                <div class="time-block"><span class="time-num" id="hours">23</span><span class="time-label">Hrs</span></div>
+                <div class="time-block"><span class="time-num" id="minutes">44</span><span class="time-label">Mins</span></div>
+                <div class="time-block"><span class="time-num" id="seconds">43</span><span class="time-label">Secs</span></div>
+            </div>
+        </section>
+
+        <section class="waitlist-section">
+            <h3>Be the First to Know.</h3>
+            <p>Join our waitlist for launch updates, early access, and investment partnership opportunities.</p>
+            <form class="email-form" action="https://formspree.io" method="POST" id="waitlistForm">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Join the Waitlist</button>
+            </form>
+        </section>
+
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-val">500+</span>
+                <span class="metric-label">Women SHGs Empowered</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-val">Hub & Spoke</span>
+                <span class="metric-label">Tech-Driven Network</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-val">100%</span>
+                <span class="metric-label">Certified Organic Focus</span>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-header">
+                <h2>How It Works</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4><span>01</span> Central Processing Hub</h4>
+Use code with caution.
+Our technology hub aggregates, processes, and certifies organic produce from across the network — ensuring quality and traceability at scale.
+
+
+02 Spoke Farms — Women SHGs
+Rural women self-help groups operate spoke farms using our agri-tech tools, training, and inputs — growing certified organic crops with full support.
+
+
+03 Market & Distribution
+Certified organic produce reaches premium urban markets, institutional buyers, and export channels — delivering fair returns to every farmer.
+
+
+Partner With Us
+Be.Live Organics is building India's most scalable organic farming network — and we're looking for impact investors and strategic partners who share our vision.
+Send Enquiry
+
+
+Be.Live Organics — Growing Tomorrow, Today.
+© 2026 Be.Live Organics. All rights reserved.
+// Target Launch Date: 90 Days from now
+const launchDate = new Date();
+launchDate.setDate(launchDate.getDate() + 90);
+function updateCountdown() {
+const now = new Date().getTime();
+const distance = launchDate - now;
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("days").innerText = days;
+document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
