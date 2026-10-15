@@ -5,11 +5,9 @@
   Author  : House of Sahoo
   -----------------------------------------------
   v1.0.0 | 2026-10-15 | Initial release
-           - Design tokens & CSS variables
-           - Ambient orbs, leaf particles
-           - Navbar, Hero, Philosophy sections
-           - "From the House of Sahoo" supporter card
-           - Footer & responsive breakpoints
+  v1.1.0 | 2026-10-16 | Philosophy section live
+           - philosophy-label, body, quote, vedanta styles
+           - Three pillar cards
 */
 
 /* ---------- CSS Variables ---------- */
@@ -386,64 +384,89 @@ body {
 .philosophy {
   position: relative;
   z-index: 1;
-  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 24px;
-  background: linear-gradient(180deg, var(--cream) 0%, var(--green-mist) 100%);
+  padding: 120px 24px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--green-mist) 60%, var(--cream) 100%);
 }
 
 .philosophy-inner {
-  max-width: 600px;
+  max-width: 760px;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
 }
 
-.coming-soon-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
-  color: white;
+/* Label above heading */
+.philosophy-label {
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  padding: 6px 18px;
-  border-radius: 50px;
-  box-shadow: 0 4px 16px rgba(58, 110, 34, 0.25);
+  color: var(--green-mid);
 }
 
+/* Main heading */
 .philosophy-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
   font-weight: 600;
   color: var(--charcoal);
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
-.philosophy-sub {
-  font-size: 1.08rem;
-  line-height: 1.8;
-  color: var(--text-muted);
+/* Body text block */
+.philosophy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  max-width: 680px;
+}
+
+.philosophy-body p {
+  font-size: 1.07rem;
+  line-height: 1.9;
+  color: var(--text-body);
   font-weight: 400;
 }
 
-.philosophy-sub em {
+/* Pull quote */
+.philosophy-quote {
   font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
   font-style: italic;
+  font-weight: 400;
   color: var(--green-dark);
-  font-size: 1.12rem;
+  border-left: 3px solid var(--green-light);
+  padding: 16px 28px;
+  margin: 12px 0;
+  line-height: 1.5;
+  background: rgba(90, 171, 47, 0.05);
+  border-radius: 0 12px 12px 0;
+  text-align: left;
 }
 
+/* Vedanta / closing paragraph — slightly muted */
+.philosophy-vedanta {
+  font-size: 1rem !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+  border-top: 1px solid var(--green-pale);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+/* Divider */
 .philosophy-divider {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 8px;
   width: 100%;
   max-width: 320px;
 }
@@ -456,6 +479,73 @@ body {
 
 .philosophy-divider .leaf-icon {
   font-size: 1.2rem;
+}
+
+/* Three Pillar Cards */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.pillar {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(58, 110, 34, 0.07);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(58, 110, 34, 0.14);
+}
+
+.pillar-icon {
+  font-size: 2rem;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--green-pale), var(--green-mist));
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+}
+
+.pillar-title {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.2px;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+@media (max-width: 680px) {
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-quote {
+    font-size: 1.3rem;
+  }
 }
 
 /* ---------- Supporters Section ---------- */
