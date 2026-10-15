@@ -1,103 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be.Live Organics — Transparency in Cultivation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be.Live — Organic · Community · Vitality</title>
+  <meta name="description" content="Be.Live brings together organic living, community, and vitality for a healthier, more connected life." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <!-- Renders your uploaded logo.jpg with a transparent digital blend -->
-            <img src="logo.jpg" alt="Be.Live Organics Logo" class="main-logo-img">
+  <!-- Ambient background orbs -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- Floating leaf particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <span class="nav-brand">Be<span class="dot">.</span>Live</span>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#philosophy" class="nav-cta">Our Philosophy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+
+      <!-- Logo -->
+      <div class="logo-wrapper" id="logo-wrapper">
+        <div class="logo-glow-ring"></div>
+        <img
+          src="logo.jpg"
+          alt="Be.Live logo — Organic, Community, Vitality"
+          class="logo-img"
+          id="main-logo"
+        />
+      </div>
+
+      <!-- Tagline badges -->
+      <div class="tagline-pills" id="tagline-pills">
+        <span class="pill">🌿 Organic</span>
+        <span class="pill-dot">•</span>
+        <span class="pill">🤝 Community</span>
+        <span class="pill-dot">•</span>
+        <span class="pill">⚡ Vitality</span>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" id="scroll-cue">
+        <span>Discover more</span>
+        <div class="scroll-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
         </div>
-        <div class="domain-tag">beliveorganics.com</div>
-    </header>
+      </div>
 
-    <main>
-        <section class="hero">
-            <div class="movement-badge">Ecosystem Foundation Phase</div>
-            <h1>Cultivating <span>Transparency</span>.<br>Mainstreaming our Farmers.</h1>
-            <p class="philosophy-text">We are documenting our journey from the ground up. Our focus is on open information sharing, sharing technical agricultural metrics, and tracking real on-farm progress with our community.</p>
-        </section>
+    </div>
+  </section>
 
-        <!-- The Three Pillars Brought to the Front Row -->
-        <section class="pillars-section">
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon">🌱</div>
-                    <h4>Soil Vitality</h4>
-                    <p>Restoring depleted land microbiology through strict chemical-free, microbial-led regenerative processes and organic composting.</p>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">🤝</div>
-                    <h4>Community Vitality</h4>
-                    <p>Integrating local smallholders and women's self-help groups (SHGs) into direct, high-value mainstream economic structures.</p>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">☀️</div>
-                    <h4>Consumer Vitality</h4>
-                    <p>Delivering unadulterated, fully traceable, nutrient-dense superfoods straight from our certified operational nodes to urban families.</p>
-                </div>
-            </div>
-        </section>
+  <!-- PHILOSOPHY PLACEHOLDER -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy-inner">
+      <div class="coming-soon-badge">Coming Soon</div>
+      <h2 class="philosophy-heading">Our Philosophy</h2>
+      <p class="philosophy-sub">
+        Something meaningful is taking shape here.<br/>
+        <em>Check back soon.</em>
+      </p>
+      <div class="philosophy-divider">
+        <span></span><span class="leaf-icon">🌿</span><span></span>
+      </div>
+    </div>
+  </section>
 
-        <section class="action-card">
-            <h3>Join our Progress Journal</h3>
-            <p>Sign up to receive our data logs, technical soil insights, and early operational field updates directly from the ground.</p>
-            <!-- Replace YOUR_ENDPOINT with your Formspree ID later to activate email collection -->
-            <form class="form-grid" action="https://formspree.io" method="POST">
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe to Updates</button>
-            </form>
-        </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 <strong>Be.Live</strong> &nbsp;·&nbsp; Organic &nbsp;·&nbsp; Community &nbsp;·&nbsp; Vitality</p>
+  </footer>
 
-        <!-- Real Progress Log Timeline -->
-        <section class="timeline-section">
-            <h2>Our Operational Roadmap</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="time-marker done">✓</div>
-                    <div class="time-content">
-                        <h4>October 2026 — Digital Core Secured</h4>
-                        <p>Brand identity anchored, core assets registered, and free transparent baseline hosting architecture deployed globally.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time-marker current">●</div>
-                    <div class="time-content">
-                        <h4>November 2026 — Advanced Field Studies</h4>
-                        <p>On-site operational auditing at Akshayakalpa Organic systems (Tiptur) to finalize hub-and-spoke processing parameters.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time-content">
-                        <h4>Q1 2027 — Ground Operations Launch</h4>
-                        <p>Establishing our central processing anchor hub and aligning with regional women SHG networks across our pilot clusters in Odisha.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="partner-box">
-            <h2>Collaborate With Us</h2>
-            <p>We believe in radical data sharing. Reach out if you are an impact investor, agricultural researcher, or community leader looking to track our metrics.</p>
-            <form class="enquiry-form" action="https://formspree.io" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="text" name="org" placeholder="Organisation Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="details" rows="4" placeholder="Tell us about your interest in tracking our progress or partnering with us..." required></textarea>
-                <button type="submit">Submit Inquiry</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p><strong>Be.Live Organics</strong> — Growing Tomorrow, Today.</p>
-        <p>&copy; 2026 Be.Live Organics. All rights reserved. Registered Asset Corridor.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
