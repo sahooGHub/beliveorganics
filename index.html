@@ -1,15 +1,32 @@
+<!--
+  Be.Live — Landing Page
+  Version : v1.0.0
+  Date    : 2026-10-15
+  Author  : House of Sahoo
+  -----------------------------------------------
+  v1.0.0 | 2026-10-15 | Initial release
+           - Hero section with logo & tagline pills
+           - Philosophy section (placeholder)
+           - "From the House of Sahoo" — Sensera link
+           - Floating leaf particles & parallax
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Be.Live — Organic · Community · Vitality</title>
-  <meta name="description" content="Be.Live brings together organic living, community, and vitality for a healthier, more connected life." />
+  <meta name="description"
+    content="Be.Live brings together organic living, community, and vitality for a healthier, more connected life." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- Ambient background orbs -->
@@ -26,6 +43,7 @@
       <span class="nav-brand">Be<span class="dot">.</span>Live</span>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
+        <li><a href="#supporters">Our House</a></li>
         <li><a href="#philosophy" class="nav-cta">Our Philosophy</a></li>
       </ul>
     </div>
@@ -38,12 +56,7 @@
       <!-- Logo -->
       <div class="logo-wrapper" id="logo-wrapper">
         <div class="logo-glow-ring"></div>
-        <img
-          src="logo.jpg"
-          alt="Be.Live logo — Organic, Community, Vitality"
-          class="logo-img"
-          id="main-logo"
-        />
+        <img src="logo.jpg" alt="Be.Live logo — Organic, Community, Vitality" class="logo-img" id="main-logo" />
       </div>
 
       <!-- Tagline badges -->
@@ -60,7 +73,7 @@
         <span>Discover more</span>
         <div class="scroll-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12l7 7 7-7"/>
+            <path d="M12 5v14M5 12l7 7 7-7" />
           </svg>
         </div>
       </div>
@@ -74,12 +87,38 @@
       <div class="coming-soon-badge">Coming Soon</div>
       <h2 class="philosophy-heading">Our Philosophy</h2>
       <p class="philosophy-sub">
-        Something meaningful is taking shape here.<br/>
+        Something meaningful is taking shape here.<br />
         <em>Check back soon.</em>
       </p>
       <div class="philosophy-divider">
         <span></span><span class="leaf-icon">🌿</span><span></span>
       </div>
+    </div>
+  </section>
+
+  <!-- SUPPORTERS SECTION -->
+  <section class="supporters" id="supporters">
+    <div class="supporters-inner">
+      <p class="supporters-label">From the House of Sahoo</p>
+      <a href="https://sensera.co.in" target="_blank" rel="noopener noreferrer" class="supporter-card"
+        id="sensera-card">
+        <div class="supporter-icon">🩺</div>
+        <div class="supporter-info">
+          <span class="supporter-name">Sensera</span>
+          <span class="supporter-tagline">Predict. Prevent. Protect.</span>
+          <span class="supporter-domain">sensera.co.in</span>
+        </div>
+        <div class="supporter-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </div>
+      </a>
+      <p class="supporters-note">
+        Two ventures. One family. The House of Sahoo envisions a world where health
+        is predicted before it fails, and life is lived with organic intention.
+        Sensera and Be.Live are its expressions — science and soul, growing together.
+      </p>
     </div>
   </section>
 
@@ -90,4 +129,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
