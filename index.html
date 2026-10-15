@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Be.Live Organics</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be.Live Organics — The Right to Eat Organic</title>
+    <!-- Links your HTML structure directly to your external style sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img src="logo.jpg" alt="Be.Live Logo" class="logo">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#community">Community</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="logo.jpg" alt="Be.Live Organics Logo" class="hero-logo">
-    <a href="#about" class="cta">Learn More</a>
-  </section>
+    <header>
+        <div class="logo-area">
+            <!-- Relative path loads your uploaded logo.jpg asset seamlessly -->
+            <img src="logo.jpg" alt="Be.Live Organics Logo" class="main-logo-img">
+        </div>
+        <div class="domain-tag">beliveorganics.com</div>
+    </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Be.Live Organics is about farming the future — connecting people with sustainable, organic living.</p>
-    <ul>
-      <li>🌱 Sustainable farming practices</li>
-      <li>🤝 Building community connections</li>
-      <li>💚 Promoting vitality and wellness</li>
-    </ul>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="movement-badge">The "Right to Eat Organic" Drive</div>
+            <h1>Farming the <span>Future</span>.<br>Mainstreaming our Farmers.</h1>
+            <p class="philosophy-text">Increasing conscious consumer awareness to dismantle the egg-and-chicken gap, directly linking informed urban families with verified rural cultivators.</p>
+        </section>
 
-  <!-- Community Section -->
-  <section id="community">
-    <h2>Our Community</h2>
-    <div class="grid">
-      <div>👩‍🌾 Farmers → Consumers</div>
-      <div>📚 Knowledge sharing → Healthy living</div>
-    </div>
-  </section>
+        <section class="action-card">
+            <h3>Join the Movement Waitlist</h3>
+            <p>Be the first to know about our crop launch updates, early access nodes, and impact investment options.</p>
+            <!-- Replace YOUR_ENDPOINT with your Formspree unique ID link later -->
+            <form class="form-grid" action="https://formspree.io" method="POST">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Secure Early Access</button>
+            </form>
+        </section>
 
-  <!-- Contact Section -->
-  <footer id="contact">
-    <p>📧 Email: info@beliveorganics.com</p>
-    <p>© 2026 Be.Live Organics</p>
-  </footer>
+        <section class="paradox-section">
+            <div class="paradox-container">
+                <h2>Breaking the Egg-and-Chicken Cycle</h2>
+                <div class="paradox-box">
+                    <h4>The Market Paradox</h4>
+                    <p>Consumers want clean, organic food but lack transparent validation channels to trust the source. Farmers want to transition away from expensive, toxic chemical inputs but cannot absorb the risk without a verified, high-value consumer market ready to clear their harvest.</p>
+                </div>
+                <div class="paradox-box">
+                    <h4>The Be.Live Integration</h4>
+                    <p>We provide the missing trust engine. By transforming the consumer's right to clear food into an active data network, we establish an integrated hub that absorbs market risk, provides technical extension skills, and brings farmers directly into the economic mainstream.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="framework-section">
+            <h2>The Hub-and-Spoke Infrastructure</h2>
+            <div class="stack-container">
+                <div class="stack-item">
+                    <h4><span>01</span> The Central Processing Anchor</h4>
+                    <p>Our company-owned, 5-to-10-acre industrial hub manufactures high-grade bio-inputs and handles centralized crop grading, food-grade pulverizing, and nitrogen-flushed shelf-life preservation.</p>
+                </div>
+                <div class="stack-item">
+                    <h4><span>02</span> Decentralised Women SHG Spokes</h4>
+                    <p>Partnering with localized village networks like Mission Shakti. We supply rural women farmers with clean seeds, pre-certified inputs, and technical training on their home plots.</p>
+                </div>
+                <div class="stack-item">
+                    <h4><span>03</span> Direct Institutional Channels</h4>
+                    <p>Dismantling middleman layers by guaranteeing a pre-fixed, premium organic buyback structure, directly shipping verified crops to urban centers and corporate networks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-box">
+            <h2>Strategic Partnerships</h2>
+            <p>We are seeking impact investors, institutional buyers, and development partners to accelerate our footprint across Odisha.</p>
+            <form class="enquiry-form" action="https://formspree.io" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="org" placeholder="Organisation / Entity Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="details" rows="4" placeholder="Tell us about your organization's alignment or interest..." required></textarea>
+                <button type="submit">Submit Corporate Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Be.Live Organics</strong> — Growing Tomorrow, Today.</p>
+        <p>&copy; 2026 Be.Live Organics. All rights reserved. Registered Asset Corridor.</p>
+    </footer>
+
 </body>
 </html>
