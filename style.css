@@ -28,22 +28,25 @@ header {
     box-sizing: border-box;
 }
 
-.logo-area {
+.logo-container {
     display: flex;
     align-items: center;
+    background: transparent;
 }
 
 .main-logo-img {
     height: auto;
-    max-height: 55px; /* Ensures the logo stays elegant and fits standard navigation bars */
+    max-height: 65px; /* Boosted sizing to beautifully highlight the visual logo mark */
     width: auto;
     display: block;
+    mix-blend-mode: multiply; /* Digitally knocks out the white background background automatically */
 }
 
 .domain-tag {
     font-size: 14px;
     color: var(--muted-green);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .hero {
@@ -55,8 +58,8 @@ header {
 }
 
 .movement-badge {
-    background-color: #ebdccb;
-    color: #614d3b;
+    background-color: #eadecf;
+    color: #634f3b;
     padding: 6px 16px;
     font-size: 12px;
     font-weight: 700;
@@ -88,10 +91,52 @@ h1 span {
     margin: 0 auto 40px auto;
 }
 
+/* Three Pillars Layout Styles */
+.pillars-section {
+    max-width: 1050px;
+    margin: 0 auto 60px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pillar-card {
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.pillar-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.pillar-card h4 {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    color: var(--charcoal);
+    font-weight: 700;
+}
+
+.pillar-card p {
+    margin: 0;
+    color: var(--muted-green);
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
 .action-card {
     background: var(--white);
     max-width: 600px;
-    margin: 0 auto 60px auto;
+    margin: 80px auto;
     padding: 40px;
     border-radius: 16px;
     border: 1px solid var(--border-line);
@@ -146,11 +191,10 @@ button {
     transition: background 0.2s ease;
 }
 
-button:hover { 
-    background: #2c3e2b; 
-}
+button:hover { background: #2c3e2b; }
 
-.paradox-section {
+/* Progress Timeline Styles */
+.timeline-section {
     background: #f3f1ea;
     padding: 80px 6%;
     border-top: 1px solid var(--border-line);
@@ -158,93 +202,66 @@ button:hover {
     box-sizing: border-box;
 }
 
-.paradox-container {
-    max-width: 800px;
+.timeline-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 0 0 50px 0;
+    letter-spacing: -0.5px;
+}
+
+.timeline-container {
+    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
-}
-
-.paradox-container h2 {
-    font-size: 32px;
-    margin: 0 0 20px 0;
-    letter-spacing: -0.5px;
-}
-
-.paradox-box {
-    background: var(--white);
-    padding: 35px;
-    border-radius: 12px;
-    border: 1px solid var(--border-line);
-    text-align: left;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-}
-
-.paradox-box h4 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    color: var(--accent-ochre);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.paradox-box p {
-    margin: 0;
-    color: var(--muted-green);
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.framework-section {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 0 24px;
-    box-sizing: border-box;
-}
-
-.framework-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-    letter-spacing: -0.5px;
-}
-
-.stack-container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
-.stack-item {
+.timeline-item {
     background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
+    padding: 25px 30px;
+    border-radius: 10px;
     border: 1px solid var(--border-line);
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.stack-item h4 {
-    font-size: 20px;
-    margin: 0 0 10px 0;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    gap: 20px;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
-.stack-item h4 span {
+.time-marker {
     background: var(--bg-cream);
-    color: var(--accent-ochre);
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: 800;
+    color: var(--border-line);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
-.stack-item p {
+.time-marker.done {
+    background: #e2ede1;
+    color: var(--sage-green);
+}
+
+.time-marker.current {
+    background: #fdf3eb;
+    color: var(--accent-ochre);
+}
+
+.time-content h4 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    color: var(--charcoal);
+}
+
+.time-content p {
     margin: 0;
     color: var(--muted-green);
-    font-size: 15px;
+    font-size: 14.5px;
 }
 
 .partner-box {
@@ -286,10 +303,10 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive breakpoint to cleanly stack elements and prevent horizontal scrolling */
 @media (max-width: 768px) {
     h1 { font-size: 36px; }
     .form-grid { flex-direction: column; }
     header { flex-direction: column; gap: 12px; text-align: center; }
-    .paradox-box, .stack-item, .enquiry-form { padding: 24px; }
+    .pillars-grid { grid-template-columns: 1fr; gap: 20px; }
+    .timeline-item, .enquiry-form { padding: 24px; }
 }
