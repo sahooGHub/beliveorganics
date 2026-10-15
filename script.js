@@ -56,7 +56,7 @@ function createLeaf() {
     el.textContent = LEAF_EMOJIS[Math.floor(Math.random() * LEAF_EMOJIS.length)];
 
     const left = Math.random() * 100;          // % across screen
-    const duration = 14 + Math.random() * 18;      // 14-32s fall
+    const duration = 22 + Math.random() * 20;      // 22-42s fall — slow, unhurried
     const delay = Math.random() * 20;            // stagger
     const size = 0.7 + Math.random() * 0.8;    // 0.7–1.5rem
 
