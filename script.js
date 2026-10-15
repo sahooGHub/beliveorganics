@@ -10,6 +10,7 @@
            - Floating leaf particles
            - Logo mouse parallax
            - Scroll cue interaction
+  v1.1.0 | 2026-10-16 | No script changes (philosophy is static content)
 */
 
 // ── Navbar scroll effect ──────────────────────
