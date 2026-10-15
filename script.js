@@ -1,6 +1,16 @@
-/* =============================================
-   Be.Live — Script
-   ============================================= */
+/*
+  Be.Live — Landing Page Script
+  Version : v1.0.0
+  Date    : 2026-10-15
+  Author  : House of Sahoo
+  -----------------------------------------------
+  v1.0.0 | 2026-10-15 | Initial release
+           - Navbar scroll / frosted glass effect
+           - Logo & tagline entrance animations
+           - Floating leaf particles
+           - Logo mouse parallax
+           - Scroll cue interaction
+*/
 
 // ── Navbar scroll effect ──────────────────────
 const navbar = document.getElementById('navbar');
