@@ -697,3 +697,21 @@ body {
     padding: 8px 16px;
   }
 }
+/* ── Unified Brand Typographic Highlighting System ── */
+.brand-highlight {
+    font-weight: 700;
+    color: var(--charcoal); /* Anchors the word baseline firmly within your text grid */
+    letter-spacing: -0.2px;
+    display: inline-block;
+}
+
+.brand-dot {
+    color: #5a7d57; /* System-wide execution path for your signature green dot */
+    font-weight: 900;
+    transition: color 0.3s ease;
+}
+
+/* Optional premium soft micro-badge scaling effect on hover */
+.brand-highlight:hover .brand-dot {
+    color: var(--accent-ochre);
+}
