@@ -1,0 +1,1117 @@
+<!--
+  Be.Live — Research & Knowledge Page
+  Version : v1.0.0
+  Date    : 2026-11-01
+  Author  : House of Sahoo
+  -----------------------------------------------
+  Sections:
+    1. Before Synthetic — Ancient farming wisdom
+    2. The Green Revolution — What, Why, and the Price
+    3. Short-Term vs Long-Term — The honest accounting
+    4. Farming Techniques Spectrum — All methods compared
+    5. Multi-Strata Farming — The 7-layer food forest
+    6. Pioneers & Organisations — Akshaya Kalpa, Bhoomi, etc.
+    7. Urban vs Rural — Two worlds of growing
+    8. Hydroponics — Science of soil-less growing
+    9. Aquaponics — The symbiotic loop
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be.Live Research — The Ground Beneath Everything</title>
+    <meta name="description"
+        content="Deep research into farming history, the Green Revolution, natural farming techniques, pioneers, and the future of growing food — by Be.Live." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="research.css" />
+</head>
+
+<body>
+
+    <!-- Ambient orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Be<span class="dot">.</span>Live</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#philosophy">Philosophy</a></li>
+                <li><a href="research.html" class="nav-cta active-link">Research</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- STICKY CHAPTER NAV -->
+    <div class="chapter-nav" id="chapterNav">
+        <button class="ch-btn active" data-target="ancient" id="ch-ancient">📜 Before Synthetic</button>
+        <button class="ch-btn" data-target="green-rev" id="ch-green-rev">🌾 Green Revolution</button>
+        <button class="ch-btn" data-target="stlterm" id="ch-stlterm">⚖️ Short vs Long</button>
+        <button class="ch-btn" data-target="techniques" id="ch-techniques">🧪 Techniques</button>
+        <button class="ch-btn" data-target="multilayer" id="ch-multilayer">🌳 Multi-Layer</button>
+        <button class="ch-btn" data-target="pioneers" id="ch-pioneers">🏆 Pioneers</button>
+        <button class="ch-btn" data-target="urbanrural" id="ch-urbanrural">🏙️ Urban vs Rural</button>
+        <button class="ch-btn" data-target="hydro" id="ch-hydro">💧 Hydro & Aqua</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- HERO -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-hero">
+        <div class="r-hero-inner">
+            <p class="r-section-label">Living Knowledge</p>
+            <h1 class="r-hero-title">The Ground<br /><em>Beneath Everything</em></h1>
+            <p class="r-hero-sub">
+                Before you eat, before farming became industry, before chemical became
+                "normal" — there was a relationship between human and soil that sustained
+                ten thousand years of civilisation. This is that story, and what comes next.
+            </p>
+            <div class="r-hero-stats">
+                <div class="stat-badge">
+                    <span class="stat-num">10,000+</span>
+                    <span class="stat-label">years of farming wisdom</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-num">68%</span>
+                    <span class="stat-label">Indian soils nitrogen-deficient</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-num">7 layers</span>
+                    <span class="stat-label">in a natural food forest</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-num">90%</span>
+                    <span class="stat-label">less water in aquaponics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 1 — BEFORE SYNTHETIC -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section" id="ancient">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 01</p>
+                <h2 class="r-section-title">Before Synthetic</h2>
+                <p class="r-section-sub">For 10,000 years, humans farmed in relationship with the earth. Not extraction
+                    — conversation.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">🌾</div>
+                    <div class="tl-content">
+                        <span class="tl-era">10,000 BCE — The Agrarian Beginning</span>
+                        <h3>The First Covenant with the Soil</h3>
+                        <p>In the Fertile Crescent, the Indus Valley, and Yellow River basin, humans transitioned from
+                            nomadic hunters to settled cultivators. They observed, they listened. Crops like emmer
+                            wheat, barley, lentils, and rice were domesticated — not engineered, but patiently selected
+                            over generations. Wisdom was accumulated in practice, in community, in ritual.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">🐄</div>
+                    <div class="tl-content">
+                        <span class="tl-era">Ancient India — The Cow-Centred System</span>
+                        <h3>Panchagavya & the Living Farm</h3>
+                        <p>Ancient Vedic farming texts (Krishi Parashar, ~300 CE) prescribed an entire farming ecology
+                            built around the cow. The five cow products — dung, urine, milk, curd, ghee — formed the
+                            basis of what we now call inputs. Cow dung was composted into rich manure. Cow urine was
+                            diluted to create a natural pesticide. Fields were ritually prepared with chanting — a form
+                            of conscious agriculture that understood the link between farming, health, and spirit.</p>
+                        <div class="tl-highlight">
+                            <strong>Jeevamrit:</strong> A fermented mix of cow dung, urine, jaggery, and pulse flour —
+                            still used in Zero Budget Natural Farming today. Modern science has now confirmed its role
+                            in seeding the soil with billions of beneficial microbes per ml.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">💧</div>
+                    <div class="tl-content">
+                        <span class="tl-era">Traditional Water Wisdom</span>
+                        <h3>Stepwells, Tanks & Bunds — Engineering Without Engineers</h3>
+                        <p>India's pre-colonial farmers were master water engineers. Stepwells (baolis), village tanks
+                            (eri in Tamil Nadu), bunds (earthen check dams), and the kul system of terraced canals in
+                            Himalayan regions sustained agriculture through drought cycles that would devastate modern
+                            industrial farms. Each village was a self-sustaining hydrological unit.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">🌻</div>
+                    <div class="tl-content">
+                        <span class="tl-era">Mixed & Intercropping</span>
+                        <h3>The Three Sisters & Indian Polycultures</h3>
+                        <p>Traditional farming never practised monoculture. The Mesoamerican "Three Sisters" (corn +
+                            beans + squash) is famous in the West, but India had equally sophisticated guilds: paddy +
+                            fish farming (still alive in Odisha and West Bengal), coconut + banana + pepper + ginger +
+                            pineapple in Kerala, and the bajra + jowar + legume rotations of the Deccan. Each
+                            combination served a purpose — nitrogen fixation, shade, pest confusal, water retention.</p>
+                        <div class="tl-highlight">
+                            <strong>Result:</strong> No single crop failure could destroy a family. Biodiversity was the
+                            insurance policy.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">🌱</div>
+                    <div class="tl-content">
+                        <span class="tl-era">Pre-1900 — Green Manuring & Composting</span>
+                        <h3>The Original "Fertiliser"</h3>
+                        <p>Before synthetic fertilisers existed, farmers across the world used green manuring — planting
+                            leguminous crops (dhaincha, sunn hemp, cowpea) and ploughing them back into the soil before
+                            they matured. This added nitrogen, improved soil structure, and suppressed weeds. Compost
+                            from kitchen waste, wood ash, bone meal, and crop residue completed the nutrient cycle. The
+                            key: <em>the farm fed itself</em>.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot">⚗️</div>
+                    <div class="tl-content">
+                        <span class="tl-era">1909 — The Haber-Bosch Turning Point</span>
+                        <h3>When Nitrogen Was Captured from Air</h3>
+                        <p>Fritz Haber and Carl Bosch's invention of synthetic nitrogen fixation (the Haber-Bosch
+                            process) was arguably the most world-changing chemical discovery of the 20th century. By
+                            extracting nitrogen from the atmosphere and combining it with hydrogen (from natural gas),
+                            they created ammonium nitrate — cheap, effective, and scalable. Synthetic fertiliser was
+                            born. The world's food supply doubled within decades. And the clock on soil health started
+                            ticking.</p>
+                        <div class="tl-highlight">
+                            <strong>The trade-off:</strong> We gained immediate yield. We traded topsoil, microbial
+                            life, biodiversity, and long-term fertility — though nobody knew it yet.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 2 — THE GREEN REVOLUTION -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section r-section-dark" id="green-rev">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 02</p>
+                <h2 class="r-section-title" style="color:#e8f5e2;">The Green Revolution</h2>
+                <p class="r-section-sub" style="color:rgba(255,255,255,0.6);">A salvation in the short term. A slow
+                    crisis in the long term. The honest story of why it happened.</p>
+            </div>
+
+            <div class="gr-grid">
+                <div class="gr-story reveal">
+                    <h3>The Crisis That Demanded It</h3>
+                    <p>By the 1950s and 60s, India was in a precarious position. The Bengal Famine of 1943 (which killed
+                        2–3 million people partly due to colonial mismanagement) was still raw memory. India's
+                        population was exploding. Two consecutive droughts struck in 1965–66. The country was importing
+                        wheat under the US PL-480 programme — a geopolitically humiliating dependence known as
+                        "ship-to-mouth" existence.</p>
+                    <p>Pandit Nehru's India needed to feed itself. Fast. The alternative — widespread famine — was not
+                        abstract. It was imminent.</p>
+                </div>
+
+                <div class="gr-story reveal">
+                    <h3>The Architects</h3>
+                    <div class="person-card">
+                        <span class="person-icon">🌾</span>
+                        <div>
+                            <strong>Norman Borlaug</strong>
+                            <p>American agronomist who developed high-yielding dwarf wheat varieties that wouldn't
+                                topple under heavy fertiliser application. Nobel Peace Prize 1970. Called the "Father of
+                                the Green Revolution."</p>
+                        </div>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-icon">🇮🇳</span>
+                        <div>
+                            <strong>M. S. Swaminathan</strong>
+                            <p>India's agricultural scientist who partnered with Borlaug to introduce HYV (High Yielding
+                                Variety) wheat to Punjab and Haryana, transforming India from food-deficit to
+                                food-exporting nation within a decade.</p>
+                        </div>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-icon">💰</span>
+                        <div>
+                            <strong>Rockefeller & Ford Foundations</strong>
+                            <p>Funded the research institutions (CIMMYT, IRRI) that bred the new varieties and promoted
+                                them globally — with significant geopolitical motivation to stabilise poor nations
+                                against communist movements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gr-what reveal">
+                <h3>What the Green Revolution Actually Was</h3>
+                <div class="gr-pillars-4">
+                    <div class="gr-pillar">
+                        <span class="gr-pillar-icon">🧬</span>
+                        <strong>HYV Seeds</strong>
+                        <p>High Yielding Variety seeds — semi-dwarf wheat and rice that could absorb large amounts of
+                            fertiliser without lodging (falling over).</p>
+                    </div>
+                    <div class="gr-pillar">
+                        <span class="gr-pillar-icon">🧪</span>
+                        <strong>Chemical Inputs</strong>
+                        <p>Urea, DAP, and other synthetic fertilisers — applied at scale. Pesticides (DDT,
+                            organophosphates) to protect the vulnerable mono-crops.</p>
+                    </div>
+                    <div class="gr-pillar">
+                        <span class="gr-pillar-icon">💧</span>
+                        <strong>Irrigation</strong>
+                        <p>HYV seeds required consistent water. Massive irrigation infrastructure — canals, tube wells,
+                            groundwater pumping — was built across Punjab and AP.</p>
+                    </div>
+                    <div class="gr-pillar">
+                        <span class="gr-pillar-icon">🏦</span>
+                        <strong>Credit & Subsidies</strong>
+                        <p>Government-backed loans for seeds, fertilisers, and equipment. MSP (Minimum Support Price)
+                            guarantees for wheat and rice only — creating crop bias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gr-why reveal">
+                <h3>Why Countries Said Yes</h3>
+                <div class="why-items">
+                    <div class="why-item">
+                        <span>🍚</span>
+                        <p><strong>Food security:</strong> Real and urgent — populations were at starvation risk</p>
+                    </div>
+                    <div class="why-item">
+                        <span>🗺️</span>
+                        <p><strong>Geopolitics:</strong> US Cold War strategy — keep poor nations stable, repel
+                            communism</p>
+                    </div>
+                    <div class="why-item">
+                        <span>📣</span>
+                        <p><strong>Political optics:</strong> Leaders needed visible success stories and grain
+                            independence</p>
+                    </div>
+                    <div class="why-item">
+                        <span>💹</span>
+                        <p><strong>Economic pressure:</strong> IMF/World Bank lending was conditional on agricultural
+                            modernisation</p>
+                    </div>
+                    <div class="why-item">
+                        <span>🔬</span>
+                        <p><strong>Scientific authority:</strong> Western science had unprecedented credibility — the
+                            system trusted it</p>
+                    </div>
+                    <div class="why-item">
+                        <span>🌾</span>
+                        <p><strong>Yield proof:</strong> Early results in Punjab were genuinely extraordinary — hard to
+                            argue against</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 3 — SHORT vs LONG TERM -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section" id="stlterm">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 03</p>
+                <h2 class="r-section-title">The Honest Accounting</h2>
+                <p class="r-section-sub">Short-term gains vs long-term costs — what the ledger actually looks like fifty
+                    years later.</p>
+            </div>
+
+            <div class="compare-table reveal">
+                <div class="compare-col compare-col-short">
+                    <div class="compare-col-header">
+                        <span>⚡</span>
+                        <h3>Short-Term Gains<br /><small>(1965 — 1985)</small></h3>
+                    </div>
+                    <ul class="compare-list">
+                        <li>✅ India's wheat production tripled — 10 to 30 million tonnes in 10 years</li>
+                        <li>✅ Famine averted — no large-scale starvation events after the 1960s</li>
+                        <li>✅ Farmer incomes rose sharply in Punjab and Haryana</li>
+                        <li>✅ India became a food exporter by 1970s</li>
+                        <li>✅ Rural employment in irrigation and processing boomed</li>
+                        <li>✅ Political stability through food security</li>
+                    </ul>
+                </div>
+                <div class="compare-divider">
+                    <div class="compare-vs">VS</div>
+                </div>
+                <div class="compare-col compare-col-long">
+                    <div class="compare-col-header">
+                        <span>⏳</span>
+                        <h3>Long-Term Costs<br /><small>(1985 — Today)</small></h3>
+                    </div>
+                    <ul class="compare-list">
+                        <li>❌ Punjab's water table falling at 1 metre/year — critical depletion</li>
+                        <li>❌ Soil salinity from over-irrigation affecting 6.7 million hectares</li>
+                        <li>❌ 68% of Indian soils now nitrogen-deficient despite more fertiliser</li>
+                        <li>❌ "Cancer train" (Bhatinda–Bikaner) — pesticide cancer clusters in Punjab</li>
+                        <li>❌ Farmer debt crisis — suicide epidemic in Maharashtra, AP, Punjab</li>
+                        <li>❌ Loss of 90%+ of India's traditional seed varieties</li>
+                        <li>❌ Nutritional decline — HYV crops have lower micronutrient density</li>
+                        <li>❌ Monoculture vulnerability — one blight can destroy entire regions</li>
+                        <li>❌ Soil microbiome collapse — biological diversity nearly absent</li>
+                        <li>❌ Diminishing returns — each additional kg of fertiliser yields less</li>
+                    </ul>
+                </div>
+            </div>
+
+            <blockquote class="r-pullquote reveal">
+                "We solved hunger yesterday by borrowing from tomorrow's soil. That loan is now due."
+            </blockquote>
+
+            <div class="soil-data reveal">
+                <h3>India's Current Soil State</h3>
+                <div class="soil-bars">
+                    <div class="soil-bar-item">
+                        <span class="soil-bar-label">Soils with depleted organic matter</span>
+                        <div class="soil-bar-wrap">
+                            <div class="soil-bar" style="--pct:73%; --clr:#c0392b;">73%</div>
+                        </div>
+                    </div>
+                    <div class="soil-bar-item">
+                        <span class="soil-bar-label">Soils nitrogen-deficient</span>
+                        <div class="soil-bar-wrap">
+                            <div class="soil-bar" style="--pct:68%; --clr:#e67e22;">68%</div>
+                        </div>
+                    </div>
+                    <div class="soil-bar-item">
+                        <span class="soil-bar-label">Soils phosphorus-deficient</span>
+                        <div class="soil-bar-wrap">
+                            <div class="soil-bar" style="--pct:48%; --clr:#e67e22;">48%</div>
+                        </div>
+                    </div>
+                    <div class="soil-bar-item">
+                        <span class="soil-bar-label">Soils with micro-nutrient deficiency</span>
+                        <div class="soil-bar-wrap">
+                            <div class="soil-bar" style="--pct:41%; --clr:#f39c12;">41%</div>
+                        </div>
+                    </div>
+                    <div class="soil-bar-item">
+                        <span class="soil-bar-label">Farmland under waterlogging / salinity</span>
+                        <div class="soil-bar-wrap">
+                            <div class="soil-bar" style="--pct:14%; --clr:#27ae60;">14%</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="soil-source">Source: ICAR Soil Health Report 2022, NABARD Agricultural Finance Review</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 4 — FARMING TECHNIQUES -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section r-section-alt" id="techniques">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 04</p>
+                <h2 class="r-section-title">The Spectrum of Farming</h2>
+                <p class="r-section-sub">From industrial monoculture to living food forests — the full range of
+                    approaches, honestly compared.</p>
+            </div>
+
+            <div class="technique-cards">
+
+                <div class="technique-card t-conventional reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">🏭</span>
+                        <div>
+                            <h3>Industrial / Conventional</h3>
+                            <span class="tc-badge tc-badge-red">High Impact</span>
+                        </div>
+                    </div>
+                    <p>Large-scale monoculture using synthetic NPK fertilisers, herbicides, pesticides, and mechanised
+                        harvesting. Optimised for maximum short-term yield per acre.</p>
+                    <div class="tc-metrics">
+                        <div class="tc-metric"><span>Yield</span>
+                            <div class="tc-bar">
+                                <div style="width:90%;background:#e74c3c;"></div>
+                            </div><small>Very High (short-term)</small>
+                        </div>
+                        <div class="tc-metric"><span>Soil Health</span>
+                            <div class="tc-bar">
+                                <div style="width:15%;background:#27ae60;"></div>
+                            </div><small>Very Low (declining)</small>
+                        </div>
+                        <div class="tc-metric"><span>Water Usage</span>
+                            <div class="tc-bar">
+                                <div style="width:88%;background:#e74c3c;"></div>
+                            </div><small>Very High</small>
+                        </div>
+                        <div class="tc-metric"><span>Farmer Cost</span>
+                            <div class="tc-bar">
+                                <div style="width:85%;background:#e74c3c;"></div>
+                            </div><small>Very High</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-card t-organic reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">🌿</span>
+                        <div>
+                            <h3>Certified Organic</h3>
+                            <span class="tc-badge tc-badge-yellow">Transitional</span>
+                        </div>
+                    </div>
+                    <p>No synthetic chemicals — uses composted manure, botanical pesticides, cover crops. Certified by
+                        NPOP (India), USDA Organic, or EU Organic. Often requires 3-year conversion period.</p>
+                    <div class="tc-metrics">
+                        <div class="tc-metric"><span>Yield</span>
+                            <div class="tc-bar">
+                                <div style="width:62%;background:#f39c12;"></div>
+                            </div><small>Moderate (improving over years)</small>
+                        </div>
+                        <div class="tc-metric"><span>Soil Health</span>
+                            <div class="tc-bar">
+                                <div style="width:65%;background:#27ae60;"></div>
+                            </div><small>Good (recovering)</small>
+                        </div>
+                        <div class="tc-metric"><span>Water Usage</span>
+                            <div class="tc-bar">
+                                <div style="width:60%;background:#f39c12;"></div>
+                            </div><small>Moderate</small>
+                        </div>
+                        <div class="tc-metric"><span>Farmer Cost</span>
+                            <div class="tc-bar">
+                                <div style="width:55%;background:#f39c12;"></div>
+                            </div><small>Moderate (lower inputs)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-card t-natural reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">🐄</span>
+                        <div>
+                            <h3>Natural Farming (ZBNF)</h3>
+                            <span class="tc-badge tc-badge-green">Restorative</span>
+                        </div>
+                    </div>
+                    <p>Zero Budget Natural Farming — popularised by Subhash Palekar. Uses only farm-derived inputs from
+                        a local cow: Jeevamrit (fermented microbe solution) & Beejamrit (seed treatment). No purchased
+                        inputs. Near-zero input cost.</p>
+                    <div class="tl-highlight" style="margin:12px 0;">
+                        <strong>Jeevamrit recipe:</strong> 200L water + 10kg dung + 5–10L urine + 2kg jaggery + 2kg
+                        pulse flour + a handful of undisturbed soil. Ferment 48 hrs, apply fortnightly.
+                    </div>
+                    <div class="tc-metrics">
+                        <div class="tc-metric"><span>Yield</span>
+                            <div class="tc-bar">
+                                <div style="width:58%;background:#f39c12;"></div>
+                            </div><small>Moderate (lower year 1–2, stable)</small>
+                        </div>
+                        <div class="tc-metric"><span>Soil Health</span>
+                            <div class="tc-bar">
+                                <div style="width:82%;background:#27ae60;"></div>
+                            </div><small>Very High (recovering fast)</small>
+                        </div>
+                        <div class="tc-metric"><span>Water Usage</span>
+                            <div class="tc-bar">
+                                <div style="width:38%;background:#27ae60;"></div>
+                            </div><small>Low (mulching conserves)</small>
+                        </div>
+                        <div class="tc-metric"><span>Farmer Cost</span>
+                            <div class="tc-bar">
+                                <div style="width:8%;background:#27ae60;"></div>
+                            </div><small>Near Zero</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-card t-biodynamic reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">🌙</span>
+                        <div>
+                            <h3>Biodynamic</h3>
+                            <span class="tc-badge tc-badge-purple">Holistic</span>
+                        </div>
+                    </div>
+                    <p>Based on Rudolf Steiner's lectures (1924). Treats the farm as a self-sustaining living organism.
+                        Uses lunar and cosmic calendars for planting, harvesting. Specific preparations like BD500 (cow
+                        horn manure) enrich the soil-spirit relationship. Demeter certified globally.</p>
+                    <div class="tc-metrics">
+                        <div class="tc-metric"><span>Soil Health</span>
+                            <div class="tc-bar">
+                                <div style="width:88%;background:#27ae60;"></div>
+                            </div><small>Exceptional (microbially rich)</small>
+                        </div>
+                        <div class="tc-metric"><span>Complexity</span>
+                            <div class="tc-bar">
+                                <div style="width:80%;background:#9b59b6;"></div>
+                            </div><small>High (requires deep learning)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-card t-permaculture reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">🌳</span>
+                        <div>
+                            <h3>Permaculture</h3>
+                            <span class="tc-badge tc-badge-green">Regenerative</span>
+                        </div>
+                    </div>
+                    <p>Permanent Agriculture — design system by Bill Mollison and David Holmgren (1978). Mimics natural
+                        ecosystem patterns. No tillage, no bare soil, maximum diversity. Organised into zones based on
+                        usage frequency. Food forests, swales, guilds, companion planting.</p>
+                    <p><strong>Core ethics:</strong> Earth Care · People Care · Fair Share</p>
+                    <div class="tc-metrics">
+                        <div class="tc-metric"><span>Long-term Yield</span>
+                            <div class="tc-bar">
+                                <div style="width:75%;background:#27ae60;"></div>
+                            </div><small>High (once established)</small>
+                        </div>
+                        <div class="tc-metric"><span>Ecosystem Restoration</span>
+                            <div class="tc-bar">
+                                <div style="width:95%;background:#27ae60;"></div>
+                            </div><small>Exceptional</small>
+                        </div>
+                        <div class="tc-metric"><span>Setup Time</span>
+                            <div class="tc-bar">
+                                <div style="width:70%;background:#e74c3c;"></div>
+                            </div><small>3–10 years to full function</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-card t-regen reveal">
+                    <div class="tc-header">
+                        <span class="tc-icon">♻️</span>
+                        <div>
+                            <h3>Regenerative Agriculture</h3>
+                            <span class="tc-badge tc-badge-green">Future-Forward</span>
+                        </div>
+                    </div>
+                    <p>An umbrella approach focused on rebuilding soil organic matter and restoring degraded soil
+                        biodiversity. Combines no-till, cover crops, rotational grazing, and agroforestry. Now
+                        attracting investment from food brands, carbon markets, and institutional investors.</p>
+                    <p>Key measurable: <strong>Soil Organic Carbon (SOC)</strong> — 1% increase in SOC on all cropland
+                        globally would offset all humanity's annual CO₂ emissions.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 5 — MULTI-LAYER FARMING -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section" id="multilayer">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 05</p>
+                <h2 class="r-section-title">Multi-Layer Farming</h2>
+                <p class="r-section-sub">Nature never grows in rows. A forest uses every inch of space and light across
+                    7 vertical layers. So can we.</p>
+            </div>
+
+            <div class="layer-diagram reveal">
+                <div class="layer-item layer-7">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 7</span>
+                        <strong>Canopy — Tall Trees</strong>
+                        <p>Mango, Jackfruit, Coconut, Moringa — the ceiling. Provides shade, windbreak, bulk produce,
+                            bird habitat. The anchor of the system.</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-6">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 6</span>
+                        <strong>Sub-Canopy — Medium Trees</strong>
+                        <p>Banana, Guava, Papaya, Drumstick — smaller trees that thrive in partial shade. Food,
+                            medicine, and mulch material.</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-5">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 5</span>
+                        <strong>Shrub Layer</strong>
+                        <p>Chillies, Lemongrass, Curry leaf, Tulsi, Hibiscus — perennial shrubs providing spice,
+                            medicine, and fragrance.</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-4">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 4</span>
+                        <strong>Herbaceous Layer</strong>
+                        <p>Turmeric, Ginger, Coriander, Amaranth — seasonal herbs and vegetables growing at knee height
+                            in dappled light.</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-3">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 3</span>
+                        <strong>Ground Cover</strong>
+                        <p>Sweet potato, Pumpkin, Mint, Clover — covers bare soil, prevents erosion, retains moisture,
+                            suppresses weeds.</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-2">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 2</span>
+                        <strong>Root / Rhizosphere</strong>
+                        <p>Radish, Carrot, Beetroot, Yam — below ground. Deep-rooted plants also break up compacted
+                            subsoil (bio-tillage).</p>
+                    </div>
+                </div>
+                <div class="layer-item layer-1">
+                    <div class="layer-bar"></div>
+                    <div class="layer-info">
+                        <span class="layer-num">Layer 1</span>
+                        <strong>Vine / Climber Layer</strong>
+                        <p>Pepper, Passion fruit, Bottle gourd, Beans — use the vertical structure of other plants. The
+                            intelligent opportunist layer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="multilayer-example reveal">
+                <h3>🌴 Kerala's Living Example</h3>
+                <p>The traditional homestead (tharavad) garden of Kerala is one of the world's most efficient
+                    food-producing systems. On less than half an acre, a family can grow coconut, banana, pepper
+                    (climbing the coconut), ginger, pineapple, yam, drumstick, curry leaf, spinach varieties, and fish
+                    in ponds. Every square metre is productive. Every plant supports another.</p>
+                <div class="ml-stats">
+                    <div class="ml-stat">
+                        <strong>8–12×</strong>
+                        <span>more food per sq metre vs monoculture</span>
+                    </div>
+                    <div class="ml-stat">
+                        <strong>Zero</strong>
+                        <span>bare soil — always covered</span>
+                    </div>
+                    <div class="ml-stat">
+                        <strong>Year-round</strong>
+                        <span>harvest from different layers</span>
+                    </div>
+                    <div class="ml-stat">
+                        <strong>Self-fertilising</strong>
+                        <span>through leaf litter and mulch</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 6 — PIONEERS & ORGANISATIONS -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section r-section-dark" id="pioneers">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 06</p>
+                <h2 class="r-section-title" style="color:#e8f5e2;">The Ones Who Chose Differently</h2>
+                <p class="r-section-sub" style="color:rgba(255,255,255,0.6);">Organisations and individuals proving that
+                    another way is possible — right now, in India.</p>
+            </div>
+
+            <div class="pioneer-grid">
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🥛</span>
+                        <div>
+                            <h3>Akshaya Kalpa</h3>
+                            <span class="pioneer-tag">Karnataka · Organic Dairy</span>
+                        </div>
+                    </div>
+                    <p>One of India's most successful organic dairy brands. Working with 750+ farmer families across
+                        Karnataka, they supply certified organic A2 milk, ghee, and dairy products directly to urban
+                        consumers. Their model is direct: farmer training, fair price guarantees, and consumer
+                        traceability. Every packet traces back to a named farm.</p>
+                    <div class="pioneer-impact">
+                        <span>750+ farm families</span>
+                        <span>A2 certified</span>
+                        <span>Direct-to-consumer</span>
+                    </div>
+                </div>
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🌱</span>
+                        <div>
+                            <h3>Bhoomi Network</h3>
+                            <span class="pioneer-tag">Pan-India · Knowledge Commons</span>
+                        </div>
+                    </div>
+                    <p>A grassroots network connecting organic farmers, consumers, and researchers. Bhoomi runs
+                        workshops, farm visits, and publications championing ecological agriculture. Their annual
+                        festivals bring together farmers from across the country to share seed, knowledge, and
+                        community. A living repository of traditional and contemporary farming wisdom.</p>
+                    <div class="pioneer-impact">
+                        <span>Knowledge sharing</span>
+                        <span>Seed festivals</span>
+                        <span>Rural-urban bridge</span>
+                    </div>
+                </div>
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🌿</span>
+                        <div>
+                            <h3>Subhash Palekar</h3>
+                            <span class="pioneer-tag">Maharashtra · ZBNF Pioneer</span>
+                        </div>
+                    </div>
+                    <p>Padma Shri awardee and the father of Zero Budget Natural Farming in India. His four-wheel
+                        framework — Jeevamrit, Beejamrit, mulching (Achchadan), and Waaphasa (soil aeration) — has been
+                        adopted by over 4 million farmers. The Andhra Pradesh government adopted ZBNF state-wide with a
+                        goal of converting 6 million farmers to chemical-free farming by 2027.</p>
+                    <div class="pioneer-impact">
+                        <span>4M+ farmers trained</span>
+                        <span>AP State Programme</span>
+                        <span>Padma Shri 2016</span>
+                    </div>
+                </div>
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🌍</span>
+                        <div>
+                            <h3>Save Our Soil / Cauvery Calling</h3>
+                            <span class="pioneer-tag">Global · Sadhguru / Isha Foundation</span>
+                        </div>
+                    </div>
+                    <p>Isha Foundation's twin campaigns. Cauvery Calling aims to plant 242 crore trees across Cauvery
+                        basin farmlands, turning single-crop farms into agroforestry systems that revive the river's
+                        water flow. Save Our Soil is a global movement to create policy mandating minimum 3–6% soil
+                        organic content — lobbying 193 governments and building public awareness across 60+ countries.
+                    </p>
+                    <div class="pioneer-impact">
+                        <span>242Cr trees target</span>
+                        <span>193 nations lobbied</span>
+                        <span>Global awareness</span>
+                    </div>
+                </div>
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🌾</span>
+                        <div>
+                            <h3>Navdanya</h3>
+                            <span class="pioneer-tag">Uttarakhand · Vandana Shiva</span>
+                        </div>
+                    </div>
+                    <p>Dr. Vandana Shiva's seed sovereignty movement. Navdanya has preserved over 5,000 varieties of
+                        rice, 150+ wheat varieties, and thousands of other seed varieties that would otherwise be
+                        extinct. Their seed banks and farms in Dehradun are living archives of India's agricultural
+                        biodiversity — the intellectual and genetic commons that belongs to all farmers.</p>
+                    <div class="pioneer-impact">
+                        <span>5000+ seed varieties</span>
+                        <span>60+ seed banks</span>
+                        <span>Seed sovereignty</span>
+                    </div>
+                </div>
+
+                <div class="pioneer-card reveal">
+                    <div class="pioneer-top">
+                        <span class="pioneer-icon">🏕️</span>
+                        <div>
+                            <h3>Kheti Virasat Mission</h3>
+                            <span class="pioneer-tag">Punjab · Chemical Crisis Response</span>
+                        </div>
+                    </div>
+                    <p>A response to Punjab's pesticide crisis. KVM works with farmers in the cancer-affected belt of
+                        Malwa to transition from chemical farming back to natural and organic methods. They counter the
+                        farmer suicide epidemic with economic alternatives — natural farming reduces input costs from
+                        ₹30,000–50,000/acre to near zero. A quiet, powerful revolution happening in India's most
+                        chemically damaged farmland.</p>
+                    <div class="pioneer-impact">
+                        <span>Malwa region focus</span>
+                        <span>Farmer health advocacy</span>
+                        <span>Input cost reduction</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <blockquote class="r-pullquote r-pullquote-light reveal">
+                "These are not idealists. They are scientists, economists, and farmers who ran the numbers — and chose
+                the earth."
+            </blockquote>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 7 — URBAN vs RURAL -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section" id="urbanrural">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 07</p>
+                <h2 class="r-section-title">Urban vs Rural</h2>
+                <p class="r-section-sub">Two worlds of growing — and the bridge between them that might save both.</p>
+            </div>
+
+            <div class="ur-split reveal">
+                <div class="ur-col ur-rural">
+                    <div class="ur-col-header">
+                        <span>🌾</span>
+                        <h3>Rural Farming</h3>
+                    </div>
+                    <ul class="ur-list">
+                        <li>🟢 Direct soil connection — real, living earth</li>
+                        <li>🟢 Scale advantage — large acreage, bulk production</li>
+                        <li>🟢 Natural rainfall dependence — monsoon-aware cycles</li>
+                        <li>🟢 Biodiversity corridors — wildlife, pollinator habitat</li>
+                        <li>🟢 Traditional knowledge embedded in the community</li>
+                        <li>🔴 Market access — often dependent on middlemen, lowest price</li>
+                        <li>🔴 Infrastructure gaps — storage, cold chain, roads</li>
+                        <li>🔴 Climate vulnerability — one bad monsoon = crisis</li>
+                        <li>🔴 Brain drain — youth leaving for cities</li>
+                    </ul>
+                </div>
+                <div class="ur-col ur-urban">
+                    <div class="ur-col-header">
+                        <span>🏙️</span>
+                        <h3>Urban Farming</h3>
+                    </div>
+                    <ul class="ur-list">
+                        <li>🟢 Consumer proximity — zero food miles</li>
+                        <li>🟢 Year-round production with controlled environment</li>
+                        <li>🟢 Premium pricing — urban consumers pay more for fresh local</li>
+                        <li>🟢 Community engagement — rooftop gardens, school farms</li>
+                        <li>🟢 Reduced transport emissions and packaging</li>
+                        <li>🔴 Space severely limited — high cost per sq metre</li>
+                        <li>🔴 No real topsoil — containers, raised beds, or soilless</li>
+                        <li>🔴 High energy cost — lighting, pumping, climate control</li>
+                        <li>🔴 Pollutant risk — air and water quality concerns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ur-bridge reveal">
+                <h3>🌉 The Bridge: Peri-Urban & CSA Models</h3>
+                <div class="bridge-cards">
+                    <div class="bridge-card">
+                        <strong>Community Supported Agriculture (CSA)</strong>
+                        <p>City consumers pre-pay for weekly farm produce baskets. The farmer gets upfront capital, the
+                            consumer gets fresh seasonal food. Risk is shared. Relationship is direct. Urban folk visit
+                            the farm — the divide heals.</p>
+                    </div>
+                    <div class="bridge-card">
+                        <strong>Rooftop Farm Networks</strong>
+                        <p>Bangalore, Pune, and Chennai are seeing networks of connected rooftop gardens coordinating
+                            through apps. Each rooftop grows 2–3 crops they specialise in, then exchanges with
+                            neighbours — creating a hyperlocal food web within a city block.</p>
+                    </div>
+                    <div class="bridge-card">
+                        <strong>Food Forest Parks</strong>
+                        <p>Replacing ornamental parks with edible forests. Chennai's Ayanavaram food forest, Bengaluru's
+                            perennial food parks — city-dwellers harvest freely, maintenance costs drop, biodiversity
+                            soars. The park feeds you back.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION 8 — HYDROPONICS & AQUAPONICS -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="r-section r-section-alt" id="hydro">
+        <div class="r-section-inner">
+            <div class="r-section-header">
+                <p class="r-section-label">Chapter 08</p>
+                <h2 class="r-section-title">Hydro & Aquaponics</h2>
+                <p class="r-section-sub">Farming without soil — the science, the possibilities, and the honest
+                    limitations.</p>
+            </div>
+
+            <!-- HYDROPONICS -->
+            <div class="tech-section reveal">
+                <div class="tech-intro">
+                    <span class="tech-icon">💧</span>
+                    <h3>Hydroponics</h3>
+                    <p class="tech-tagline">Growing in nutrient-rich water, without any soil at all.</p>
+                </div>
+
+                <div class="tech-how">
+                    <h4>How It Works</h4>
+                    <p>Plants are grown with their roots directly in, or exposed to, a mineral nutrient solution.
+                        Without the buffering and transport role of soil, nutrients must be precisely formulated and
+                        pH-managed (typically 5.5–6.5). Plants grown this way often reach maturity 30–50% faster than
+                        soil-grown equivalents.</p>
+                </div>
+
+                <div class="hydro-systems">
+                    <div class="hydro-sys">
+                        <strong>NFT (Nutrient Film Technique)</strong>
+                        <p>A thin film of nutrient solution continuously flows over the roots in sloped channels. Highly
+                            efficient. Standard for commercial lettuce, herbs, spinach.</p>
+                    </div>
+                    <div class="hydro-sys">
+                        <strong>DWC (Deep Water Culture)</strong>
+                        <p>Roots suspended in oxygenated nutrient-rich water. Simple, fast-growing. Great for beginners
+                            and home growers. Excellent for leafy greens.</p>
+                    </div>
+                    <div class="hydro-sys">
+                        <strong>Kratky Method</strong>
+                        <p>Passive DWC — no pump needed. Container partially filled with nutrients, gap left for air
+                            roots. Extremely low tech. Perfect for herbs and small greens.</p>
+                    </div>
+                    <div class="hydro-sys">
+                        <strong>Ebb & Flow (Flood & Drain)</strong>
+                        <p>The growing tray floods with nutrients periodically, then drains. Roots get wet and dry
+                            cycles. Good for a variety of crops including tomatoes and peppers.</p>
+                    </div>
+                </div>
+
+                <div class="tech-compare">
+                    <div class="tech-pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>90% less water than soil farming</li>
+                            <li>2–3× faster growth rates</li>
+                            <li>Year-round production regardless of season</li>
+                            <li>No soil-borne pests or diseases</li>
+                            <li>Perfect for water-scarce urban environments</li>
+                            <li>Scalable from home to commercial</li>
+                        </ul>
+                    </div>
+                    <div class="tech-cons">
+                        <h4>❌ Limitations</h4>
+                        <ul>
+                            <li>High capital cost — pumps, grow lights, trays, controls</li>
+                            <li>Electricity-dependent — power cuts = crop loss</li>
+                            <li>No living soil ecosystem — nutritionally different product</li>
+                            <li>Mineral nutrient management is skilled work</li>
+                            <li>Limited to leafy greens, herbs, small fruiting crops</li>
+                            <li>Does not regenerate soil or support ecology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AQUAPONICS -->
+            <div class="tech-section reveal" style="margin-top:60px;">
+                <div class="tech-intro">
+                    <span class="tech-icon">🐟</span>
+                    <h3>Aquaponics</h3>
+                    <p class="tech-tagline">The closed loop: fish feed plants, plants clean water for fish.</p>
+                </div>
+
+                <div class="aqua-loop">
+                    <div class="loop-step">
+                        <span class="loop-icon">🐟</span>
+                        <span class="loop-label">Fish eat feed</span>
+                    </div>
+                    <div class="loop-arrow">→</div>
+                    <div class="loop-step">
+                        <span class="loop-icon">💩</span>
+                        <span class="loop-label">Fish excrete ammonia</span>
+                    </div>
+                    <div class="loop-arrow">→</div>
+                    <div class="loop-step">
+                        <span class="loop-icon">🦠</span>
+                        <span class="loop-label">Bacteria convert to nitrates</span>
+                    </div>
+                    <div class="loop-arrow">→</div>
+                    <div class="loop-step">
+                        <span class="loop-icon">🌿</span>
+                        <span class="loop-label">Plants absorb nitrates</span>
+                    </div>
+                    <div class="loop-arrow">→</div>
+                    <div class="loop-step">
+                        <span class="loop-icon">💧</span>
+                        <span class="loop-label">Clean water returns to fish</span>
+                    </div>
+                </div>
+
+                <div class="tech-compare">
+                    <div class="tech-pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Uses only 1/10th the water of conventional farming</li>
+                            <li>Produces both fish protein AND vegetables simultaneously</li>
+                            <li>No synthetic fertilisers — fish waste is the nutrient</li>
+                            <li>Can be built anywhere — rooftops to containers</li>
+                            <li>Extremely water-efficient — near-zero drainage</li>
+                            <li>Highly productive per square metre</li>
+                        </ul>
+                    </div>
+                    <div class="tech-cons">
+                        <h4>❌ Limitations</h4>
+                        <ul>
+                            <li>System balance is delicate — fish die = plant crash</li>
+                            <li>High setup costs — tanks, plumbing, filtration, aeration</li>
+                            <li>Fish feed must be sourced (soy-based feeds have an ecological cost)</li>
+                            <li>Aquaculture expertise required alongside horticulture</li>
+                            <li>Best fish (Tilapia, Catla) are not widely eaten in all regions</li>
+                            <li>Regulatory clarity in India is still evolving</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="aqua-note reveal">
+                    <p>🇮🇳 <strong>In India:</strong> Aquaponics farms are emerging in Bangalore, Pune, Hyderabad, and
+                        Chennai — primarily serving restaurants and organic markets. Startups like <strong>Aqua Farm
+                            Foods</strong> and <strong>UrbanKisaan</strong> are commercialising this model. The ancient
+                        paddy-fish systems of Odisha and Bengal are essentially traditional aquaponics — a circle
+                        returning.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="r-cta">
+        <div class="r-cta-inner">
+            <p class="r-section-label">Join the Movement</p>
+            <h2>The soil is speaking.<br /><em>Are we listening?</em></h2>
+            <p>Be.Live exists because we believe food should be honest. The research above is not theory — it guides
+                every relationship we build with every farmer we work with.</p>
+            <a href="index.html" class="r-cta-btn">Back to Be.Live</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 <strong>Be.Live</strong> &nbsp;·&nbsp; Organic &nbsp;·&nbsp; Community &nbsp;·&nbsp; Vitality
+            &nbsp;·&nbsp; <a href="research.html" style="color:var(--green-light);text-decoration:none;">Research</a>
+        </p>
+    </footer>
+
+    <script src="research.js"></script>
+</body>
+
+</html>
