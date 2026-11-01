@@ -682,6 +682,110 @@ body {
   color: var(--green-light);
 }
 
+/* ---------- Knowledge Garden (Research Teaser) ---------- */
+.knowledge {
+  position: relative;
+  z-index: 1;
+  padding: 100px 24px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--green-mist) 50%, var(--cream) 100%);
+}
+
+.knowledge-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.knowledge-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+.knowledge-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.k-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(58, 110, 34, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.k-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(58, 110, 34, 0.14);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.k-icon {
+  font-size: 1.8rem;
+}
+
+.k-card strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  display: block;
+}
+
+.k-card p {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.k-cta {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: var(--green-mid);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.k-cta:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(58, 110, 34, 0.28);
+}
+
+@media (max-width: 720px) {
+  .knowledge-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .knowledge-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
   .nav-links {
