@@ -707,52 +707,121 @@ body {
   line-height: 1.8;
 }
 
-.knowledge-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+/* 3 Featured horizontal cards */
+.knowledge-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
-  margin-top: 8px;
+  max-width: 680px;
 }
 
-.k-card {
+.kf-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 18px;
-  padding: 24px 20px;
+  border-radius: 16px;
+  padding: 20px 22px;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(58, 110, 34, 0.06);
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
-.k-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 40px rgba(58, 110, 34, 0.14);
-  background: rgba(255, 255, 255, 0.75);
+.kf-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 32px rgba(58, 110, 34, 0.12);
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.k-icon {
+.kf-icon {
   font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--green-pale), var(--green-mist));
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
 }
 
-.k-card strong {
-  font-size: 0.9rem;
+.kf-body {
+  flex: 1;
+  text-align: left;
+}
+
+.kf-body strong {
+  display: block;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--charcoal);
-  display: block;
+  margin-bottom: 3px;
 }
 
-.k-card p {
-  font-size: 0.8rem;
-  line-height: 1.65;
+.kf-body p {
+  font-size: 0.82rem;
+  line-height: 1.6;
   color: var(--text-muted);
+}
+
+.kf-arrow {
+  font-size: 1rem;
+  color: var(--green-mid);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  font-weight: 700;
+}
+
+.kf-card:hover .kf-arrow {
+  transform: translateX(4px);
+}
+
+/* Compact pill strip */
+.knowledge-also {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.knowledge-also-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.k-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.k-pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 50px;
+  border: 1px solid var(--green-pale);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.k-pill:hover {
+  background: var(--green-pale);
+  border-color: var(--green-light);
+  color: var(--green-dark);
+  transform: translateY(-1px);
 }
 
 .k-cta {
