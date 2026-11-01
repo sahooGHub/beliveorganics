@@ -29,6 +29,170 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Knowledge Garden — embedded so GitHub Pages doesn't need style.css update ── */
+    .knowledge {
+      position: relative;
+      z-index: 1;
+      padding: 80px 24px;
+      background: linear-gradient(180deg, var(--cream, #f7faf2) 0%, #eef9e6 50%, var(--cream, #f7faf2) 100%);
+    }
+
+    .knowledge-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+    }
+
+    .knowledge-sub {
+      font-size: 1rem;
+      color: #7a8a6e;
+      max-width: 560px;
+      line-height: 1.8;
+      margin-top: -8px;
+    }
+
+    /* 3 featured horizontal cards */
+    .knowledge-featured {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .kf-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(90, 171, 47, 0.18);
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 16px 20px;
+      text-decoration: none;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    }
+
+    .kf-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 28px rgba(58, 110, 34, 0.13);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .kf-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #d6f0be, #eef9e6);
+      border-radius: 10px;
+      border: 1px solid rgba(90, 171, 47, 0.18);
+    }
+
+    .kf-body {
+      flex: 1;
+      text-align: left;
+    }
+
+    .kf-body strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #2a2a2a;
+      margin-bottom: 2px;
+    }
+
+    .kf-body p {
+      font-size: 0.79rem;
+      line-height: 1.55;
+      color: #7a8a6e;
+      margin: 0;
+    }
+
+    .kf-arrow {
+      font-size: 1rem;
+      color: #5aab2f;
+      flex-shrink: 0;
+      font-weight: 700;
+      transition: transform 0.35s ease;
+    }
+
+    .kf-card:hover .kf-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Pill strip */
+    .knowledge-also {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .knowledge-also-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #7a8a6e;
+    }
+
+    .k-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+    }
+
+    .k-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 50px;
+      border: 1px solid #d6f0be;
+      background: transparent;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #7a8a6e;
+      text-decoration: none;
+      transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .k-pill:hover {
+      background: #d6f0be;
+      border-color: #8ecf5a;
+      color: #3b6e22;
+      transform: translateY(-1px);
+    }
+
+    /* CTA button */
+    .k-cta {
+      display: inline-block;
+      padding: 11px 28px;
+      border-radius: 50px;
+      background: #5aab2f;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+      transition: background 0.35s, transform 0.35s, box-shadow 0.35s;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .k-cta:hover {
+      background: #3b6e22;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(58, 110, 34, 0.28);
+    }
+  </style>
 </head>
 
 <body>
