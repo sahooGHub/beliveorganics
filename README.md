@@ -1,55 +1,70 @@
-# Be.Live
+# Be.Live Organics
 
-Be.Live is a static, wellness-focused landing page and research microsite that explores the connection between organic foods, community, and vitality. The project blends a polished brand experience with an educational "Knowledge Garden" section that documents farming practices, soil health, and sustainable living.
+Be.Live Organics is a static, learning-driven website exploring the connection between food, farming, community, knowledge and nature. The project blends a brand experience with research-driven storytelling, focused on sustainable agriculture, consumer awareness and practical ecosystem thinking.
 
 ## Overview
 
-This repository contains the website for Be.Live, a concept brand built around the idea that real nourishment comes from honest food systems, connected communities, and a return to natural rhythms.
+This repository contains the V2 website for Be.Live Organics, shaped around the idea that healthier food systems are built through awareness, learning, collaboration and participation.
 
-The site is designed as a clean single-page experience with:
+The site now includes:
 
-- a brand-led hero section
-- a philosophy narrative
-- a "Knowledge Garden" research collection
-- a supportive partner section linking to Sensera
-- responsive, modern styling with subtle motion effects
+- a brand-led landing page
+- a belief and positioning story
+- an “Our Questions / Direction” page explaining the core issues being explored
+- a “Knowledge Garden” research microsite
+- a responsive, editorial visual style with soft motion and ambient design
+- direct contact options for visitors to reach the project
 
-## Live site
+## Current positioning
 
-The project is intended for GitHub Pages deployment and is currently structured as a static website.
+Be.Live Organics is not positioned as a finished farm, a guaranteed business model or a fully proven ecosystem. Instead, it presents itself as a learning journey:
 
-## Project structure
+- learning before building
+- awareness before scaling
+- consumer demand as a signal
+- farmer participation as a core part of the system
+- local context and evidence as the real test
+
+## Site structure
 
 ```text
 .
-├── index.html              # Landing page and main brand experience
-├── research.html           # Research-heavy content page / knowledge garden
-├── style.css               # Main site styles
+├── index.html              # Main V2 landing page
+├── index-v1.html           # Original Be.Live landing page preserved for reference
+├── vision.html             # Our questions, direction and learning framework
+├── research.html           # Research and knowledge content hub
+├── style.css               # Main landing-page styling
 ├── research.css            # Research page styling
-├── script.js               # Main site interaction scripts
-├── research.js             # Research page interactivity
-├── logo.jpg                # Main Be.Live brand image
+├── script.js               # Landing-page interactions
+├── research.js             # Research page scripts
+├── logo.jpg                # Main brand image
 ├── Be.Live Logo.jpg        # Alternate logo asset
-├── CNAME                   # Custom domain configuration for GitHub Pages
+├── CNAME                   # Optional custom domain configuration for GitHub Pages
 ├── README.md               # Project documentation
 ```
 
-## Features
+## Key themes
 
-- Organic, community, and vitality branding
-- Elegant landing page with layered visual design
-- Soft ambient motion and floating particle effects
-- Research section covering farming and sustainability themes
-- Responsive layout for desktop and mobile viewing
-- No build step required; simple static HTML/CSS/JS site
+The content explores questions such as:
+
+- why consumer awareness matters before production scaling
+- what missing links exist between farmers, food, knowledge, and communities
+- why Odisha may be a practical place to learn and experiment
+- why Bengaluru may be a relevant market and partnership base
+- how multi-layer farming, root-zone understanding and polyhouse systems enter the learning agenda
+- how Be.Live can grow without pretending to have all the answers
+
+## Live site
+
+The project is designed for GitHub Pages deployment as a static site.
 
 ## Local development
 
-Because this is a static HTML project, you can preview it locally without installing dependencies.
+Because this is a static HTML project, no dependency installation is needed.
 
 ### Option 1: open directly in a browser
 
-Open `index.html` in any modern browser.
+Open `index.html` in a modern browser.
 
 ### Option 2: run a simple local server
 
@@ -67,14 +82,14 @@ http://localhost:8000
 
 ## Deployment
 
-This repository is configured for GitHub Pages hosting.
+This repository is structured for GitHub Pages hosting.
 
 Typical setup:
 
 1. Push changes to the default branch.
 2. In GitHub repository settings, enable GitHub Pages.
-3. Select the branch and root folder (or use the configured custom domain if applicable).
-4. Ensure `CNAME` is present if you are using a custom domain.
+3. Select the branch and root folder.
+4. If using a custom domain, keep `CNAME` configured.
 
 ## Tech stack
 
@@ -85,12 +100,22 @@ Typical setup:
 
 ## Notes
 
-This project is a design-forward static website rather than a framework-based app. The content is intentionally editorial and brand-focused, with a strong educational narrative around healthy living and regenerative agriculture.
+This project is intentionally editorial and brand-led rather than framework-based. The tone is designed to feel honest, exploratory and grounded in learning, rather than like a polished startup pitch that claims certainty.
 
-## License
+The content is still evolving as the mission develops, and the site intentionally separates:
 
-This project does not currently declare a repository license. If you plan to reuse or distribute the code, add an appropriate open-source license before publication.
+- what is known
+- what is being studied
+- what is still being questioned
 
-## Contact / brand context
+## Contact
 
-The project is associated with the broader "House of Sahoo" ecosystem and is positioned around the values of organic living, informed nutrition, and community-centered wellbeing.
+For project inquiries or collaboration discussions:
+
+```text
+hello@beliveorganics.com
+```
+
+## Relationship to the wider House of Sahoo ecosystem
+
+Be.Live Organics is positioned as a learning and values-led initiative within the broader House of Sahoo ecosystem, alongside a focus on health, awareness and intentional living.
