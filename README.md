@@ -13,7 +13,7 @@ The site now includes:
 - an “Our Questions / Direction” page explaining the core issues being explored
 - a “Knowledge Garden” research microsite
 - a responsive, editorial visual style with soft motion and ambient design
-- direct contact options for visitors to reach the project
+- visitor contact links, temporarily disabled until a working inbox or form is configured
 
 ## Current positioning
 
@@ -108,13 +108,13 @@ The content is still evolving as the mission develops, and the site intentionall
 - what is being studied
 - what is still being questioned
 
+## Content and reuse
+
+The Be.Live name, logo, original website copy, and design assets are presented for the project’s own use. No license is granted here to reproduce or republish them. A public website or public GitHub repository can still be viewed, copied, or adapted by others; a copyright notice and clear terms help communicate ownership but cannot technically prevent copying. See the repository’s license status before reusing any code or content.
+
 ## Contact
 
-For project inquiries or collaboration discussions:
-
-```text
-hello@beliveorganics.com
-```
+Public contact is temporarily unavailable while an email inbox or contact form is being configured. Do not use an unverified `hello@beliveorganics.com` address until forwarding or mailbox delivery has been tested.
 
 ## Relationship to the wider House of Sahoo ecosystem
 
