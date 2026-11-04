@@ -4,17 +4,18 @@ Be.Live Organics is a static, learning-driven website exploring the connection b
 
 ## Overview
 
-The public website is currently focused on the V2 vision and its open questions. Detailed research notes and source-gathering materials are being kept internal while they are reviewed for accuracy and prepared for possible publication.
+The public website is focused on the V2 vision, open questions and a general Knowledge Garden introducing farming methods. The Knowledge Garden covers broad concepts—including aquaculture, polyhouse cultivation, hydroponics, multi-layer farming, integrated farming with animals and permaculture—without profiling other organisations or implying affiliations.
+
+Detailed organisation profiles and internal source-gathering notes are not included in the public Knowledge Garden.
 
 The site includes:
 
 - a brand-led V2 landing page
 - a belief and positioning story
 - an “Our Questions / Direction” page
+- a general Knowledge Garden page at `research.html`
 - the original Be.Live landing page, preserved as an alternate experience
 - responsive, editorial visual styling
-
-The Knowledge Garden and research-source pages are temporarily unpublished from the public-facing site. Their current public URLs display a notice that the material is not available. Since this repository is public, earlier versions may remain accessible in Git history; removing a page from the current site does not make repository history private.
 
 ## Current positioning
 
@@ -33,8 +34,8 @@ Be.Live Organics is not presented as a finished farm, a guaranteed business mode
 ├── index.html              # Main V2 landing page
 ├── index-v1.html           # Original Be.Live landing page preserved for reference
 ├── vision.html             # Our questions, direction and learning framework
-├── research.html           # Temporary public notice; detailed research is unpublished
-├── research-sources.html   # Temporary public notice; source notes are unpublished
+├── research.html           # General Knowledge Garden: farming-method concepts
+├── research-sources.html   # Unpublished internal source notes
 ├── style.css               # Original landing-page styling
 ├── research.css            # Retained stylesheet for future research-page work
 ├── script.js               # Original landing-page interactions
@@ -61,7 +62,7 @@ The project is designed for GitHub Pages. Enable Pages in repository settings an
 
 ## Research integrity
 
-Research notes may include organisation profiles, campaign descriptions and learning from public material. Before any of this is republished, claims should be matched to specific sources, figures attributed to the organisation or institution that reports them, and unsupported or outdated statements removed or qualified.
+The Knowledge Garden describes general methods as learning topics, not guaranteed recommendations. Suitability and outcomes depend on local conditions and should be assessed with appropriate evidence. Specific claims, figures, quotations, images and organisation profiles require suitable sources and attribution before publication.
 
 ## Content and reuse
 
