@@ -13,6 +13,12 @@
   v1.1.0 | 2026-10-16 | No script changes (philosophy is static content)
 */
 
+// Load focused responsive overrides after the base landing-page stylesheet.
+const mobileFixes = document.createElement('link');
+mobileFixes.rel = 'stylesheet';
+mobileFixes.href = 'mobile-fixes.css?v=1';
+document.head.appendChild(mobileFixes);
+
 // ── Navbar scroll effect ──────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -55,10 +61,10 @@ function createLeaf() {
     el.classList.add('leaf-particle');
     el.textContent = LEAF_EMOJIS[Math.floor(Math.random() * LEAF_EMOJIS.length)];
 
-    const left = Math.random() * 100;          // % across screen
-    const duration = 22 + Math.random() * 20;      // 22-42s fall — slow, unhurried
-    const delay = Math.random() * 20;            // stagger
-    const size = 0.7 + Math.random() * 0.8;    // 0.7–1.5rem
+    const left = Math.random() * 100;
+    const duration = 22 + Math.random() * 20;
+    const delay = Math.random() * 20;
+    const size = 0.7 + Math.random() * 0.8;
 
     el.style.cssText = `
     left: ${left}%;
@@ -79,7 +85,7 @@ document.addEventListener('mousemove', (e) => {
     if (!logoImg) return;
     const cx = window.innerWidth / 2;
     const cy = window.innerHeight / 2;
-    const dx = (e.clientX - cx) / cx;   // -1 to +1
+    const dx = (e.clientX - cx) / cx;
     const dy = (e.clientY - cy) / cy;
     logoImg.style.transform = `
     translate(${dx * 6}px, ${dy * 6}px) scale(1)
