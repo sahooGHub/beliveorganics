@@ -1,12 +1,12 @@
 /* Mobile repairs for the original Be.Live landing page. */
 @media (max-width: 680px) {
-  html { scroll-padding-top: 110px; }
+  html { scroll-padding-top: 118px; }
 
   .navbar {
     position: sticky;
     top: 0;
-    padding: 10px 16px;
-    background: rgba(247, 250, 242, 0.94);
+    padding: 8px 14px 10px;
+    background: rgba(247, 250, 242, 0.97);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
   }
@@ -14,108 +14,147 @@
   .nav-inner {
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 7px;
   }
 
-  .nav-brand { font-size: 1.25rem; }
+  .nav-brand { font-size: 1.2rem; line-height: 1.2; }
 
   .nav-links {
     width: 100%;
+    min-width: 0;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px 16px;
+    gap: 4px 12px;
   }
 
+  .nav-links li { min-width: 0; }
   .nav-links li:first-child { display: list-item; }
 
   .nav-links a {
     display: inline-block;
-    padding: 3px 0;
-    font-size: 0.8rem;
+    max-width: 100%;
+    padding: 4px 0;
+    font-size: 0.78rem;
     line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .nav-links a.nav-cta {
+    padding: 6px 11px;
+    text-align: center;
   }
 
   .hero {
-    min-height: calc(100svh - 86px);
-    padding: 30px 18px 52px;
+    min-height: calc(100svh - 92px);
+    padding: 28px 16px 48px;
   }
 
-  .hero-content { gap: 26px; }
-  .logo-img { width: min(390px, 84vw); }
-  .tagline-pills { gap: 8px; }
-  .pill { padding: 8px 14px; font-size: 0.8rem; }
+  .hero-content { gap: 24px; }
+  .logo-wrapper { max-width: 100%; }
+  .logo-img { display: block; width: min(390px, 84vw); max-width: 100%; height: auto; }
+  .tagline-pills { gap: 8px; max-width: 100%; }
+  .pill { padding: 8px 13px; font-size: 0.78rem; }
 
   .philosophy {
-    padding: 72px 18px;
+    min-width: 0;
+    padding: 68px 16px;
   }
 
   .philosophy-inner {
     width: 100%;
-    gap: 23px;
+    min-width: 0;
+    gap: 22px;
   }
 
   .philosophy-label,
   .supporters-label {
+    width: 100%;
     max-width: 100%;
-    letter-spacing: 0.14em;
-    line-height: 1.6;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
     overflow-wrap: anywhere;
   }
 
   .philosophy-heading {
+    width: 100%;
     max-width: 100%;
-    font-size: clamp(2.35rem, 10.5vw, 3.5rem);
-    line-height: 1.04;
+    font-size: clamp(2.2rem, 10vw, 3.35rem);
+    line-height: 1.08;
     letter-spacing: -0.5px;
     overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .philosophy-body {
     width: 100%;
-    gap: 16px;
+    max-width: 100%;
+    min-width: 0;
+    gap: 15px;
   }
 
   .philosophy-body p {
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 1.72;
     overflow-wrap: anywhere;
   }
 
   .philosophy-quote {
-    padding: 14px 16px;
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    max-width: 100%;
+    padding: 14px 15px;
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
     line-height: 1.45;
     overflow-wrap: anywhere;
   }
 
+  .philosophy-divider { max-width: 240px; }
+
   .pillars {
+    width: 100%;
+    min-width: 0;
     grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
+    gap: 13px;
   }
 
   .pillar {
+    width: 100%;
     min-width: 0;
-    padding: 24px 18px;
+    padding: 23px 17px;
+    overflow-wrap: anywhere;
   }
 
-  .knowledge { padding: 68px 18px; }
+  .knowledge { padding: 64px 16px; }
+  .knowledge-inner { width: 100%; min-width: 0; }
+  .knowledge-featured { min-width: 0; }
+
+  .kf-card {
+    min-width: 0;
+    gap: 12px;
+    padding: 15px 13px;
+  }
+
+  .kf-body { min-width: 0; overflow-wrap: anywhere; }
+  .kf-arrow { flex: 0 0 auto; }
 
   .supporters {
-    padding: 64px 18px;
+    min-width: 0;
+    padding: 60px 16px;
   }
 
-  .supporters-inner { gap: 18px; }
+  .supporters-inner { width: 100%; min-width: 0; gap: 18px; }
 
   .supporter-card {
+    width: 100%;
     min-width: 0;
     flex-direction: column;
     align-items: center;
-    gap: 13px;
-    padding: 21px 17px;
+    gap: 12px;
+    padding: 20px 15px;
     text-align: center;
   }
 
   .supporter-info {
+    flex: 1 1 auto;
     min-width: 0;
     width: 100%;
     align-items: center;
@@ -124,21 +163,24 @@
   }
 
   .supporter-name {
-    font-size: 1.18rem;
+    max-width: 100%;
+    font-size: 1.16rem;
     line-height: 1.35;
     overflow-wrap: anywhere;
   }
 
   .supporter-tagline,
-  .supporter-domain {
+  .supporter-domain,
+  .supporters-note {
     max-width: 100%;
     overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .supporter-arrow { transform: rotate(45deg); }
 
   .footer {
-    padding: 22px 18px;
+    padding: 22px 16px;
     line-height: 1.6;
     overflow-wrap: anywhere;
   }
@@ -146,14 +188,15 @@
   .version-link {
     right: 12px;
     bottom: 12px;
-    padding: 10px 15px;
+    padding: 10px 14px;
   }
 }
 
 @media (max-width: 380px) {
-  .nav-links { gap: 4px 11px; }
-  .nav-links a { font-size: 0.75rem; }
+  .navbar { padding-left: 10px; padding-right: 10px; }
+  .nav-links { gap: 3px 9px; }
+  .nav-links a { font-size: 0.74rem; }
   .philosophy,
-  .supporters { padding-left: 15px; padding-right: 15px; }
-  .supporter-card { padding: 18px 14px; }
+  .supporters { padding-left: 13px; padding-right: 13px; }
+  .supporter-card { padding: 18px 12px; }
 }
