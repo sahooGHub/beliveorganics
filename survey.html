@@ -17,7 +17,7 @@
   <main>
     <section class="hero"><div class="wrap"><p class="eyebrow">A short food-habits survey</p><h1>Help us understand<br /><em>how people choose food.</em></h1><p class="lead">Hi friends! I’m exploring urban food-buying habits and possible farm-direct food essentials. I’d value your honest, unfiltered thoughts. This survey takes about two minutes.</p><div class="notice"><strong>Live survey:</strong> Your responses are completely anonymous and help guide clean, farm-direct food standards.</div></div></section>
     
-    <form class="survey wrap" id="survey" action="https://formspree.io/f/moeezype" method="POST" aria-label="Food habits survey" novalidate>
+    <form class="survey wrap" id="survey" aria-label="Food habits survey" novalidate>
       <div class="progress-wrap" aria-label="Survey progress"><div class="progress-meta"><span id="stepLabel">Question 1 of 6</span><span id="progressPercent">17%</span></div><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div></div>
 
       <fieldset class="question" data-step="0"><legend class="q-title">1. How do you usually judge the quality of vegetables or everyday food essentials you buy?</legend><p class="hint">Choose the factor that matters most to you.</p><div class="options"><label class="option"><input type="radio" name="quality" value="appearance" required><span>Appearance, such as freshness, colour or condition</span></label><label class="option"><input type="radio" name="quality" value="taste"><span>Taste and flavour after cooking</span></label><label class="option"><input type="radio" name="quality" value="price"><span>Price or value for money</span></label><label class="option"><input type="radio" name="quality" value="source"><span>Brand, label or information about the source</span></label><label class="option"><input type="radio" name="quality" value="recommendation"><span>Recommendations or familiarity with the seller</span></label><label class="option"><input type="radio" name="quality" value="other"><span>Other / not sure</span></label></div></fieldset>
@@ -30,4 +30,170 @@
 
       <fieldset class="question" data-step="4" hidden><legend class="q-title">5. Which farm-direct food categories, if any, would you consider buying regularly?</legend><p class="hint">Select all that apply. Choose “None of these” by itself if none interest you.</p><div class="options"><label class="option"><input type="checkbox" name="category" value="dairy"><span>Dairy products, such as milk, curd or ghee</span></label><label class="option"><input type="checkbox" name="category" value="oils"><span>Cooking oils, such as groundnut, sesame or coconut</span></label><label class="option"><input type="checkbox" name="category" value="grains"><span>Grains, rice or millets</span></label><label class="option"><input type="checkbox" name="category" value="vegetables"><span>Seasonal vegetables</span></label><label class="option"><input type="checkbox" name="category" value="none"><span>None of these</span></label><label class="option"><input type="checkbox" name="category" value="other"><span>Other</span></label></div></fieldset>
 
-      <fieldset class="question" data-step="5" hidden><legend class="q-title">
+      <fieldset class="question" data-step="5" hidden><legend class="q-title">6. What is the main reason you don’t buy more organic or farm-direct food today?</legend><p class="hint">Choose the closest answer.</p><div class="options"><label class="option"><input type="radio" name="barrier" value="price" required><span>Price</span></label><label class="option"><input type="radio" name="barrier" value="trust"><span>I’m unsure whether the claims are reliable</span></label><label class="option"><input type="radio" name="barrier" value="access"><span>It is hard to find, order or get consistently</span></label><label class="option"><input type="radio" name="barrier" value="satisfied"><span>I’m satisfied with where I currently shop</span></label><label class="option"><input type="radio" name="barrier" value="not-considered"><span>I haven’t considered it / not interested</span></label><label class="option"><input type="radio" name="barrier" value="other"><span>Other / not sure</span></label></div></fieldset>
+
+      <p class="validation" id="validation" role="alert" aria-live="polite"></p>
+
+      <div class="actions">
+        <span class="preview-tag">Anonymous & Secure</span>
+        <div class="buttons">
+          <button class="button secondary" id="backButton" type="button" hidden>Back</button>
+          <!-- Using data-fs-submit-btn so Formspree SDK manages loading state -->
+          <button class="button" id="nextButton" type="button" data-fs-submit-btn>Next</button>
+        </div>
+      </div>
+
+      <div data-fs-error style="color: #9b3429; font-size: 0.86rem; margin: 8px 0;"></div>
+
+      <section class="completion" id="completion" hidden aria-live="polite" data-fs-success>
+        <h2>Thank you!</h2>
+        <p>Your response has been recorded successfully. We truly appreciate your time and insights.</p>
+        <button class="button secondary" type="button" id="restartButton">Submit another response</button>
+      </section>
+
+      <p class="privacy">Privacy: This survey is completely anonymous and does not collect your name or contact details. Responses are used solely to understand food quality preferences.</p>
+    </form>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>Be.Live Organics · Growing together</span><a href="index.html">Return to Be.Live</a></div></footer>
+  
+  <!-- Formspree JS SDK Initialization -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#survey', formId: 'moeezype' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+  <script>
+    (() => {
+      const steps = [...document.querySelectorAll('.question')];
+      const progressBar = document.getElementById('progressBar');
+      const stepLabel = document.getElementById('stepLabel');
+      const progressPercent = document.getElementById('progressPercent');
+      const backButton = document.getElementById('backButton');
+      const nextButton = document.getElementById('nextButton');
+      const validation = document.getElementById('validation');
+      const completion = document.getElementById('completion');
+      const surveyForm = document.getElementById('survey');
+      let current = 0;
+
+      function showStep(index) {
+        current = index;
+        steps.forEach((step, i) => { step.hidden = i !== current; });
+        const percent = Math.round(((current + 1) / steps.length) * 100);
+        stepLabel.textContent = `Question ${current + 1} of ${steps.length}`;
+        progressPercent.textContent = `${percent}%`;
+        progressBar.style.width = `${percent}%`;
+        backButton.hidden = current === 0;
+        nextButton.textContent = current === steps.length - 1 ? 'Submit' : 'Next';
+        validation.textContent = '';
+        steps[current].querySelector('input')?.focus({ preventScroll: true });
+      }
+
+      function hasAnswer(step) {
+        const inputs = [...step.querySelectorAll('input')];
+        return inputs.some(input => input.checked);
+      }
+
+      function validateCheckboxStep(step) {
+        const checked = [...step.querySelectorAll('input[type="checkbox"]')].filter(input => input.checked);
+        const none = step.querySelector('input[value="none"]');
+        if (none && none.checked && checked.length > 1) {
+          none.checked = false;
+        }
+        if (current === 2) {
+          if (checked.length === 0) {
+            validation.textContent = 'Select at least one option to continue.';
+            return false;
+          }
+          if (checked.length > 3) {
+            validation.textContent = 'Select up to three options.';
+            return false;
+          }
+        }
+        if (current === 4) {
+          if (checked.length === 0) {
+            validation.textContent = 'Select at least one option to continue.';
+            return false;
+          }
+        }
+        return true;
+      }
+
+      steps[4].querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.addEventListener('change', () => {
+          const none = steps[4].querySelector('input[value="none"]');
+          const others = [...steps[4].querySelectorAll('input[type="checkbox"]')].filter(item => item !== none);
+          if (input === none && none.checked) others.forEach(item => { item.checked = false; });
+          if (input !== none && input.checked) none.checked = false;
+          validation.textContent = '';
+        });
+      });
+
+      steps[2].querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.addEventListener('change', () => {
+          const checked = [...steps[2].querySelectorAll('input[type="checkbox"]')].filter(item => item.checked);
+          const none = steps[2].querySelector('input[value="none"]');
+          if (input.value === 'none' && input.checked) {
+            steps[2].querySelectorAll('input[type="checkbox"]').forEach(item => {
+              if (item !== input) item.checked = false;
+            });
+          } else if (input.checked && none && none.checked) {
+            none.checked = false;
+          }
+          if (checked.length > 3) {
+            input.checked = false;
+            validation.textContent = 'Select up to three options.';
+          } else {
+            validation.textContent = '';
+          }
+        });
+      });
+
+      nextButton.addEventListener('click', (e) => {
+        if (!hasAnswer(steps[current])) {
+          e.preventDefault();
+          validation.textContent = current === 4 ? 'Select at least one option to continue.' : 'Choose an answer to continue.';
+          return;
+        }
+        if (current === 2 || current === 4) {
+          if (!validateCheckboxStep(steps[current])) {
+            e.preventDefault();
+            return;
+          }
+        }
+        
+        // If not the last step, move forward and prevent form submit
+        if (current < steps.length - 1) {
+          e.preventDefault();
+          showStep(current + 1);
+          window.scrollTo({ top: document.querySelector('.progress-wrap').offsetTop - 20, behavior: 'smooth' });
+          return;
+        }
+
+        // On the final step, let the Formspree AJAX SDK take over and submit the form naturally
+      });
+
+      backButton.addEventListener('click', () => {
+        if (current > 0) {
+          showStep(current - 1);
+          window.scrollTo({ top: document.querySelector('.progress-wrap').offsetTop - 20, behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('restartButton').addEventListener('click', () => {
+        surveyForm.reset();
+        completion.hidden = true;
+        document.querySelector('.progress-wrap').hidden = false;
+        validation.hidden = false;
+        document.querySelector('.actions').hidden = false;
+        showStep(0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      document.getElementById('survey').addEventListener('change', () => { validation.textContent = ''; });
+      showStep(0);
+    })();
+  </script>
+  <script data-goatcounter="https://beliveorganics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
