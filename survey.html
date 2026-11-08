@@ -110,7 +110,7 @@
         if (inputs.some(input => input.type === 'checkbox' || input.type === 'radio')) {
           return inputs.some(input => input.checked);
         }
-        return true; // Optional text fields / selects on step 7
+        return true;
       }
 
       function validateCheckboxStep(step) {
@@ -177,7 +177,6 @@
           if (!validateCheckboxStep(steps[current])) return;
         }
         
-        // If not the last step, move forward
         if (current < steps.length - 1) {
           showStep(current + 1);
           window.scrollTo({ top: document.querySelector('.progress-wrap').offsetTop - 20, behavior: 'smooth' });
@@ -227,6 +226,7 @@
         validation.hidden = false;
         actionContainer.hidden = false;
         nextButton.disabled = false;
+        nextButton.textContent = 'Next'; // Reset button label back to Next
         showStep(0);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
