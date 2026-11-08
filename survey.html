@@ -34,11 +34,10 @@
 
       <p class="validation" id="validation" role="alert" aria-live="polite"></p>
 
-      <div class="actions">
+      <div class="actions" id="actionContainer">
         <span class="preview-tag">Anonymous & Secure</span>
         <div class="buttons">
           <button class="button secondary" id="backButton" type="button" hidden>Back</button>
-          <!-- Using data-fs-submit-btn so Formspree SDK manages loading state -->
           <button class="button" id="nextButton" type="button" data-fs-submit-btn>Next</button>
         </div>
       </div>
@@ -56,7 +55,6 @@
   </main>
   <footer class="footer"><div class="wrap footer-inner"><span>Be.Live Organics · Growing together</span><a href="index.html">Return to Be.Live</a></div></footer>
   
-  <!-- Formspree JS SDK Initialization -->
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
     formspree('initForm', { formElement: '#survey', formId: 'moeezype' });
@@ -73,6 +71,7 @@
       const nextButton = document.getElementById('nextButton');
       const validation = document.getElementById('validation');
       const completion = document.getElementById('completion');
+      const actionContainer = document.getElementById('actionContainer');
       const surveyForm = document.getElementById('survey');
       let current = 0;
 
@@ -162,15 +161,12 @@
           }
         }
         
-        // If not the last step, move forward and prevent form submit
         if (current < steps.length - 1) {
           e.preventDefault();
           showStep(current + 1);
           window.scrollTo({ top: document.querySelector('.progress-wrap').offsetTop - 20, behavior: 'smooth' });
           return;
         }
-
-        // On the final step, let the Formspree AJAX SDK take over and submit the form naturally
       });
 
       backButton.addEventListener('click', () => {
@@ -185,9 +181,22 @@
         completion.hidden = true;
         document.querySelector('.progress-wrap').hidden = false;
         validation.hidden = false;
-        document.querySelector('.actions').hidden = false;
+        actionContainer.hidden = false;
         showStep(0);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Listen for Formspree success event to hide action bar and show thank you block
+      document.addEventListener('submit', (e) => {
+        if (e.target === surveyForm) {
+          setTimeout(() => {
+            if (completion.style.display !== 'none' || !completion.hidden) {
+              document.querySelector('.progress-wrap').hidden = true;
+              validation.hidden = true;
+              actionContainer.hidden = true;
+            }
+          }, 300);
+        }
       });
 
       document.getElementById('survey').addEventListener('change', () => { validation.textContent = ''; });
