@@ -17,7 +17,6 @@
   <main>
     <section class="hero"><div class="wrap"><p class="eyebrow">A short food-habits survey</p><h1>Help us understand<br /><em>how people choose food.</em></h1><p class="lead">Hi friends! I’m exploring urban food-buying habits and possible farm-direct food essentials. I’d value your honest, unfiltered thoughts. This survey takes about two minutes.</p><div class="notice"><strong>Live survey:</strong> Your responses are completely anonymous and help guide clean, farm-direct food standards.</div></div></section>
     
-    <!-- Form points directly to Formspree endpoint via POST -->
     <form class="survey wrap" id="survey" action="https://formspree.io/f/moeezype" method="POST" aria-label="Food habits survey" novalidate>
       <div class="progress-wrap" aria-label="Survey progress"><div class="progress-meta"><span id="stepLabel">Question 1 of 6</span><span id="progressPercent">17%</span></div><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div></div>
 
@@ -76,16 +75,7 @@
         progressPercent.textContent = `${percent}%`;
         progressBar.style.width = `${percent}%`;
         backButton.hidden = current === 0;
-        
-        // Change button type to 'submit' on the last step so it triggers form action
-        if (current === steps.length - 1) {
-          nextButton.textContent = 'Submit';
-          nextButton.type = 'submit';
-        } else {
-          nextButton.textContent = 'Next';
-          nextButton.type = 'button';
-        }
-
+        nextButton.textContent = current === steps.length - 1 ? 'Submit' : 'Next';
         validation.textContent = '';
         steps[current].querySelector('input')?.focus({ preventScroll: true });
       }
@@ -152,29 +142,21 @@
 
       nextButton.addEventListener('click', (e) => {
         if (!hasAnswer(steps[current])) {
-          e.preventDefault();
           validation.textContent = current === 4 ? 'Select at least one option to continue.' : 'Choose an answer to continue.';
           return;
         }
         if (current === 2 || current === 4) {
-          if (!validateCheckboxStep(steps[current])) {
-            e.preventDefault();
-            return;
-          }
+          if (!validateCheckboxStep(steps[current])) return;
         }
         
-        // If not the last step, move forward and prevent submit
+        // If not the last step, move forward
         if (current < steps.length - 1) {
-          e.preventDefault();
           showStep(current + 1);
           window.scrollTo({ top: document.querySelector('.progress-wrap').offsetTop - 20, behavior: 'smooth' });
           return;
         }
         
-        // On the final step, button type is 'submit', so Formspree handles it natively.
-        // We handle the UI transition smoothly via AJAX fetch to prevent full page reload:
-        e.preventDefault();
-        
+        // Final step: Submit data to Formspree endpoint via AJAX
         nextButton.disabled = true;
         nextButton.textContent = 'Submitting...';
 
